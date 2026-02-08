@@ -8,12 +8,6 @@
     
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  <!-- Мета-теги против кэширования -->
-  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
-  <meta http-equiv="Pragma" content="no-cache">
-  <meta http-equiv="Expires" content="0">
-  
   <title>Нейронные сети - Будущее Искусственного Интеллекта</title>
 
   
@@ -383,10 +377,10 @@
             opacity: 0.95;
         }
         
-        /* Timeline */
+        /* Timeline - УЛУЧШЕННЫЙ СТИЛЬ */
         .timeline {
             position: relative;
-            max-width: 1000px;
+            max-width: 1200px;
             margin: 60px auto;
             padding: 20px;
         }
@@ -395,11 +389,12 @@
             content: '';
             position: absolute;
             left: 50%;
-            transform: translateX(-50%;
-            width: 4px;
+            transform: translateX(-50%);
+            width: 6px;
             height: 100%;
-            background: linear-gradient(180deg, #00bcd4, #3949ab);
-            border-radius: 2px;
+            background: linear-gradient(180deg, #00bcd4, #3949ab, #ff4081);
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 188, 212, 0.3);
         }
         
         .timeline-item {
@@ -407,65 +402,113 @@
             position: relative;
             width: 50%;
             padding: 30px;
+            animation: fadeIn 0.8s ease-out;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
         }
         
         .timeline-item:nth-child(odd) {
             left: 0;
             text-align: right;
+            padding-right: 50px;
         }
         
         .timeline-item:nth-child(even) {
             left: 50%;
             text-align: left;
+            padding-left: 50px;
         }
         
         .timeline-item::before {
             content: '';
             position: absolute;
-            width: 24px;
-            height: 24px;
+            width: 32px;
+            height: 32px;
             background: #ff4081;
             border-radius: 50%;
-            border: 4px solid white;
-            box-shadow: 0 0 0 4px #ff4081;
+            border: 6px solid white;
+            box-shadow: 0 0 0 6px #ff4081, 0 5px 20px rgba(255, 64, 129, 0.4);
             z-index: 2;
+            transition: all 0.4s ease;
+        }
+        
+        .timeline-item:hover::before {
+            transform: scale(1.2);
+            box-shadow: 0 0 0 8px #ff4081, 0 10px 30px rgba(255, 64, 129, 0.6);
         }
         
         .timeline-item:nth-child(odd)::before {
-            right: -12px;
+            right: -16px;
             top: 40px;
         }
         
         .timeline-item:nth-child(even)::before {
-            left: -12px;
+            left: -16px;
             top: 40px;
         }
         
         .timeline-year {
-            font-size: 2.2rem;
+            font-size: 2.5rem;
             font-weight: 900;
             color: #1a237e;
             margin-bottom: 15px;
             display: inline-block;
-            padding: 10px 25px;
-            background: rgba(0, 188, 212, 0.1);
-            border-radius: 30px;
-            border: 2px solid #00bcd4;
+            padding: 15px 30px;
+            background: linear-gradient(135deg, rgba(0, 188, 212, 0.1), rgba(57, 73, 171, 0.1));
+            border-radius: 50px;
+            border: 3px solid #00bcd4;
+            box-shadow: 0 10px 25px rgba(0, 188, 212, 0.2);
+            transition: all 0.4s ease;
+        }
+        
+        .timeline-item:hover .timeline-year {
+            transform: scale(1.05);
+            background: linear-gradient(135deg, rgba(0, 188, 212, 0.15), rgba(57, 73, 171, 0.15));
+            box-shadow: 0 15px 35px rgba(0, 188, 212, 0.3);
         }
         
         .timeline-content {
-            background: #f8f9ff;
-            padding: 25px;
-            border-radius: 15px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
-            border: 1px solid #e0e0e0;
+            background: linear-gradient(145deg, #f8f9ff, #f0f4ff);
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            border: 2px solid #e3f2fd;
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .timeline-content::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 6px;
+            background: linear-gradient(90deg, #00bcd4, #3949ab);
+        }
+        
+        .timeline-item:hover .timeline-content {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
         }
         
         .timeline-content p {
             color: #333;
-            font-size: 1.2rem;
-            line-height: 1.6;
+            font-size: 1.3rem;
+            line-height: 1.7;
             margin: 0;
+            padding: 10px 0;
+        }
+        
+        .timeline-icon {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            display: block;
+            color: #3949ab;
         }
         
         /* Applications Grid */
@@ -590,27 +633,88 @@
             background: rgba(0, 188, 212, 0.05);
             padding: 20px;
             border-radius: 10px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
         }
         
-        .trend-list {
-            list-style: none;
-            padding-left: 0;
+        .sidebar h3::before {
+            font-size: 2.2rem;
         }
         
-        .trend-list li {
-            background: rgba(0, 188, 212, 0.08);
-            padding: 25px;
+        /* УЛУЧШЕННЫЙ СПИСОК ТРЕНДОВ */
+        .trends-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin-top: 30px;
+        }
+        
+        .trend-card {
+            background: linear-gradient(145deg, #ffffff, #f8f9ff);
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            border: 2px solid #e3f2fd;
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+            text-align: center;
+        }
+        
+        .trend-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 6px;
+            background: linear-gradient(90deg, #4caf50, #8bc34a);
+        }
+        
+        .trend-card:nth-child(2)::before {
+            background: linear-gradient(90deg, #2196f3, #03a9f4);
+        }
+        
+        .trend-card:nth-child(3)::before {
+            background: linear-gradient(90deg, #9c27b0, #673ab7);
+        }
+        
+        .trend-card:nth-child(4)::before {
+            background: linear-gradient(90deg, #ff9800, #ffb74d);
+        }
+        
+        .trend-card:nth-child(5)::before {
+            background: linear-gradient(90deg, #00bcd4, #4fc3f7);
+        }
+        
+        .trend-card:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+        }
+        
+        .trend-icon {
+            font-size: 3.5rem;
             margin-bottom: 20px;
-            border-radius: 15px;
-            border-left: 5px solid #ff4081;
-            transition: all 0.3s ease;
-            font-size: 1.3rem;
-            color: #333;
+            display: block;
+            height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
         
-        .trend-list li:hover {
-            background: rgba(0, 188, 212, 0.15);
-            transform: translateX(10px);
+        .trend-title {
+            font-size: 1.6rem;
+            color: #1a237e;
+            margin-bottom: 15px;
+            font-weight: 700;
+            line-height: 1.4;
+        }
+        
+        .trend-desc {
+            color: #666;
+            font-size: 1.1rem;
+            line-height: 1.6;
         }
         
         /* Footer */
@@ -685,6 +789,7 @@
                 left: 0 !important;
                 text-align: left !important;
                 padding-left: 60px;
+                padding-right: 20px;
             }
             
             .timeline-item::before {
@@ -701,6 +806,10 @@
             }
             
             .datacenter-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .trends-grid {
                 grid-template-columns: 1fr;
             }
         }
@@ -725,7 +834,6 @@
             <a href="#applications">Применение</a>
             <a href="#datacenters">ЦОДы ИИ</a>
             <a href="#frameworks">Фреймворки</a>
-            <!-- ОБНОВЛЕННАЯ ССЫЛКА: добавлен параметр версии -->
             <a href="index2.html?v=1" class="nav-button">Узнать больше</a>
         </div>
 
@@ -735,6 +843,7 @@
     
 <div class="container">
         <div class="main-content">
+            <!-- ... весь остальной контент main-content остается без изменений ... -->
             <section id="introduction">
                 </section><h2>Введение в нейронные сети</h2>
                 <p>Нейронные
@@ -1060,56 +1169,88 @@
         </div>
         
         <div class="sidebar">
-            <h3>Историческая хронология</h3>
+            <h3><span style="margin-right: 10px;">📜</span>Историческая хронология</h3>
             <div class="timeline">
                 <div class="timeline-item">
                     <div class="timeline-year">1943</div>
                     <div class="timeline-content">
-                        <p>Первая математическая модель нейрона - МакКаллок и Питтс создали формальную модель искусственного нейрона</p>
+                        <span class="timeline-icon">🧮</span>
+                        <p><strong>Первая математическая модель нейрона</strong><br>
+                        МакКаллок и Питтс создали формальную модель искусственного нейрона, заложив основы нейронных сетей</p>
                     </div>
                 </div>
                 
                 <div class="timeline-item">
                     <div class="timeline-year">1958</div>
                     <div class="timeline-content">
-                        <p>Перцептрон Розенблатта - первая искусственная нейронная сеть, способная к обучению</p>
+                        <span class="timeline-icon">🧠</span>
+                        <p><strong>Перцептрон Розенблатта</strong><br>
+                        Первая искусственная нейронная сеть, способная к обучению и распознаванию образов</p>
                     </div>
                 </div>
                 
                 <div class="timeline-item">
                     <div class="timeline-year">1986</div>
                     <div class="timeline-content">
-                        <p>Алгоритм обратного распространения ошибки - прорыв в обучении многослойных сетей</p>
+                        <span class="timeline-icon">⚡</span>
+                        <p><strong>Алгоритм обратного распространения</strong><br>
+                        Прорыв в обучении многослойных сетей, позволивший решать сложные задачи</p>
                     </div>
                 </div>
                 
                 <div class="timeline-item">
                     <div class="timeline-year">2012</div>
                     <div class="timeline-content">
-                        <p>AlexNet побеждает в ImageNet - начало эры глубокого обучения</p>
+                        <span class="timeline-icon">🏆</span>
+                        <p><strong>AlexNet побеждает в ImageNet</strong><br>
+                        Начало эры глубокого обучения - революция в компьютерном зрении</p>
                     </div>
                 </div>
                 
                 <div class="timeline-item">
                     <div class="timeline-year">2020</div>
                     <div class="timeline-content">
-                        <p>GPT-3 и трансформеры - революция в обработке естественного языка</p>
+                        <span class="timeline-icon">🚀</span>
+                        <p><strong>GPT-3 и трансформеры</strong><br>
+                        Революция в обработке естественного языка, создание мощных языковых моделей</p>
                     </div>
                 </div>
             </div>
             
-            <h3 style="margin-top: 80px;">Тренды 2024-2025</h3>
-            <ul class="trend-list">
-                <li>Мультимодальные модели, объединяющие текст, изображения и звук</li>
-                <li>Нейросети на edge-устройствах с минимальным потреблением энергии</li>
-                <li>Эксплаинируемый ИИ (XAI) для прозрачности решений</li>
-                <li>Нейро-символический ИИ, сочетающий обучение и логику</li>
-                <li>Федеративное обучение для защиты приватности данных</li>
-            </ul>
+            <h3 style="margin-top: 80px;"><span style="margin-right: 10px;">📈</span>Тренды 2024-2025</h3>
+            <div class="trends-grid">
+                <div class="trend-card">
+                    <div class="trend-icon">🔄</div>
+                    <div class="trend-title">Мультимодальные модели</div>
+                    <div class="trend-desc">Объединяют текст, изображения, аудио и видео для более полного понимания контекста</div>
+                </div>
+                
+                <div class="trend-card">
+                    <div class="trend-icon">⚡</div>
+                    <div class="trend-title">Edge AI нейросети</div>
+                    <div class="trend-desc">Работают на мобильных и IoT устройствах с минимальным потреблением энергии</div>
+                </div>
+                
+                <div class="trend-card">
+                    <div class="trend-icon">🔍</div>
+                    <div class="trend-title">Объяснимый ИИ (XAI)</div>
+                    <div class="trend-desc">Прозрачность решений нейросетей для доверия и контроля</div>
+                </div>
+                
+                <div class="trend-card">
+                    <div class="trend-icon">🧩</div>
+                    <div class="trend-title">Нейро-символический ИИ</div>
+                    <div class="trend-desc">Сочетание машинного обучения с символической логикой</div>
+                </div>
+                
+                <div class="trend-card">
+                    <div class="trend-icon">🛡️</div>
+                    <div class="trend-title">Федеративное обучение</div>
+                    <div class="trend-desc">Обучение без централизации данных для защиты приватности</div>
+                </div>
+            </div>
         </div>
     </div>
-
-    <!-- УДАЛЕНО: мета-теги были здесь, теперь они в <head> -->
 
 
     
