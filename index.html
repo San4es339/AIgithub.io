@@ -130,6 +130,36 @@
             box-shadow: 0 5px 15px rgba(0,0,0,0.3);
         }
         
+        /* Кнопка "Узнать больше" */
+        .nav-button {
+            background: linear-gradient(135deg, #ff4081 0%, #f50057 100%);
+            color: white;
+            padding: 15px 35px;
+            border-radius: 30px;
+            font-size: 1.3rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            text-decoration: none;
+            transition: all 0.4s ease;
+            box-shadow: 0 5px 20px rgba(255, 64, 129, 0.3);
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .nav-button::before {
+            content: '🚀';
+            font-size: 1.5rem;
+        }
+        
+        .nav-button:hover {
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 10px 25px rgba(255, 64, 129, 0.5);
+            background: linear-gradient(135deg, #f50057 0%, #ff4081 100%);
+        }
+        
         /* Main Content */
         .main-content {
             background: white;
@@ -353,7 +383,7 @@
             content: '';
             position: absolute;
             left: 50%;
-            transform: translateX(-50%);
+            transform: translateX(-50%;
             width: 4px;
             height: 100%;
             background: linear-gradient(180deg, #00bcd4, #3949ab);
@@ -628,9 +658,10 @@
                 gap: 15px;
             }
             
-            nav a {
+            nav a, .nav-button {
                 width: 100%;
                 text-align: center;
+                justify-content: center;
             }
             
             .timeline::before {
@@ -681,6 +712,7 @@
             <a href="#applications">Применение</a>
             <a href="#datacenters">ЦОДы ИИ</a>
             <a href="#frameworks">Фреймворки</a>
+            <a href="#" class="nav-button">Узнать больше</a>
         </div>
 
     
