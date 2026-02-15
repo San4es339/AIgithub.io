@@ -1,427 +1,422 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
 <html lang="ru">
-<head> <meta charset="UTF-8">
-    <title>Нейросети</title>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Топ нейросетей 2024 — эффективность и инновации</title>
     
-    <!-- Favicon - несколько вариантов для надежности -->
-    <link rel="icon" type="image/x-icon" href="/favicon.ico">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <link rel="shortcut icon" href="/favicon.ico">
+    <!-- FAVICON - ИСПРАВЛЕННЫЕ ССЫЛКИ (без слеша) -->
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
     
-    <!-- Для Apple устройств -->
-    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Топ нейросетей 2024 — эффективность и инновации</title>
-  <style>
-    /* Глобальные стили */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: linear-gradient(145deg, #eef2f7 0%, #d0d9f0 100%);
-      color: #1a1f36;
-      line-height: 1.6;
-      min-height: 100vh;
-      padding: 30px 20px;
-    }
-
-    .wrapper {
-      max-width: 1300px;
-      margin: 0 auto;
-    }
-
-    /* Кнопка возврата */
-    .back-home {
-      margin-bottom: 25px;
-    }
+    <!-- Запасной вариант на случай если файлы не загрузятся -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%231a237e'/><text x='50' y='70' font-size='70' text-anchor='middle' fill='white' font-family='Arial'>AI</text></svg>">
     
-    .back-button {
-      display: inline-flex;
-      align-items: center;
-      gap: 12px;
-      background: linear-gradient(135deg, #1a237e 0%, #283593 80%);
-      color: white;
-      text-decoration: none;
-      font-size: 1.3rem;
-      font-weight: 600;
-      padding: 16px 36px;
-      border-radius: 50px;
-      box-shadow: 0 8px 22px rgba(26, 35, 126, 0.4);
-      border: 2px solid rgba(255, 255, 255, 0.25);
-      transition: all 0.3s ease;
-      letter-spacing: 0.5px;
-      text-transform: uppercase;
-      will-change: transform, box-shadow; /* Оптимизация для анимации */
-    }
-    
-    .back-button::before {
-      content: '◀';
-      font-size: 1.6rem;
-      transition: transform 0.2s;
-    }
-    
-    .back-button:hover {
-      background: linear-gradient(135deg, #0f1550, #1a237e);
-      transform: translateX(-8px);
-      box-shadow: 0 12px 30px rgba(26, 35, 126, 0.6);
-      border-color: rgba(255,255,255,0.5);
-    }
-    
-    .back-button:hover::before {
-      transform: translateX(-4px);
-    }
+    <style>
+        /* ваш существующий CSS из index2.html */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-    /* основной контейнер */
-    .sidebar {
-      background: rgba(255, 255, 255, 0.85);
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
-      border-radius: 56px 56px 48px 48px;
-      padding: 50px 45px;
-      box-shadow: 0 35px 65px -15px rgba(26, 35, 126, 0.3);
-      border: 2px solid rgba(255, 255, 255, 0.7);
-    }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(145deg, #eef2f7 0%, #d0d9f0 100%);
+            color: #1a1f36;
+            line-height: 1.6;
+            min-height: 100vh;
+            padding: 30px 20px;
+        }
 
-    h3 {
-      font-size: 2.8rem;
-      font-weight: 800;
-      background: linear-gradient(145deg, #1a237e, #283593);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      margin: 0 0 15px 0;
-      letter-spacing: -0.02em;
-      border-bottom: 4px solid #00bcd4;
-      padding-bottom: 20px;
-      display: inline-block;
-    }
+        .wrapper {
+            max-width: 1300px;
+            margin: 0 auto;
+        }
 
-    h4 {
-      font-size: 2.2rem;
-      font-weight: 700;
-      display: flex;
-      align-items: center;
-      gap: 15px;
-      color: #0b1b3a;
-      margin: 40px 0 25px 0;
-    }
-    
-    h4 span {
-      font-size: 2.6rem;
-    }
+        /* Кнопка возврата */
+        .back-home {
+            margin-bottom: 25px;
+        }
+        
+        .back-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            background: linear-gradient(135deg, #1a237e 0%, #283593 80%);
+            color: white;
+            text-decoration: none;
+            font-size: 1.3rem;
+            font-weight: 600;
+            padding: 16px 36px;
+            border-radius: 50px;
+            box-shadow: 0 8px 22px rgba(26, 35, 126, 0.4);
+            border: 2px solid rgba(255, 255, 255, 0.25);
+            transition: all 0.3s ease;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            will-change: transform, box-shadow;
+        }
+        
+        .back-button::before {
+            content: '◀';
+            font-size: 1.6rem;
+            transition: transform 0.2s;
+        }
+        
+        .back-button:hover {
+            background: linear-gradient(135deg, #0f1550, #1a237e);
+            transform: translateX(-8px);
+            box-shadow: 0 12px 30px rgba(26, 35, 126, 0.6);
+            border-color: rgba(255,255,255,0.5);
+        }
+        
+        .back-button:hover::before {
+            transform: translateX(-4px);
+        }
 
-    h5 {
-      font-size: 1.8rem;
-      font-weight: 700;
-      color: #0f2647;
-      margin-bottom: 15px;
-      border-left: 6px solid #00bcd4;
-      padding-left: 20px;
-    }
+        /* основной контейнер */
+        .sidebar {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-radius: 56px 56px 48px 48px;
+            padding: 50px 45px;
+            box-shadow: 0 35px 65px -15px rgba(26, 35, 126, 0.3);
+            border: 2px solid rgba(255, 255, 255, 0.7);
+        }
 
-    /* КАРТОЧКИ - ИСПРАВЛЕННАЯ АНИМАЦИЯ */
-    .arch-card {
-      border-left: 8px solid;
-      padding: 28px 30px;
-      background: white;
-      margin-bottom: 28px;
-      border-radius: 30px 18px 18px 30px;
-      box-shadow: 0 20px 35px -8px rgba(0, 20, 40, 0.15);
-      transition: box-shadow 0.3s ease, margin-left 0.3s ease; /* Анимируем только безопасные свойства */
-      border-right: 1px solid rgba(0,0,0,0.03);
-      /* Убираем translateZ, scale, translateX из transition */
-    }
-    
-    .arch-card:hover {
-      margin-left: 12px; /* Сдвигаем с помощью margin вместо transform */
-      box-shadow: 0 28px 45px -8px rgba(26, 35, 126, 0.25);
-      /* Текст остается четким, так как нет scale и translate3d */
-    }
+        h3 {
+            font-size: 2.8rem;
+            font-weight: 800;
+            background: linear-gradient(145deg, #1a237e, #283593);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin: 0 0 15px 0;
+            letter-spacing: -0.02em;
+            border-bottom: 4px solid #00bcd4;
+            padding-bottom: 20px;
+            display: inline-block;
+        }
 
-    .arch-card p {
-      font-size: 1.18rem;
-      margin: 12px 0;
-      display: flex;
-      align-items: baseline;
-    }
-    
-    .arch-card p strong {
-      min-width: 170px;
-      color: #1a237e;
-      font-weight: 700;
-      font-size: 1.1rem;
-      background: #ecf0ff;
-      padding: 4px 15px;
-      border-radius: 40px;
-      margin-right: 15px;
-      text-align: center;
-    }
-    
-    .model-tag {
-      background: #e3f2fd;
-      color: #0d47a1;
-      padding: 8px 25px;
-      border-radius: 50px;
-      font-weight: 600;
-      font-size: 1rem;
-      display: inline-block;
-      margin-top: 16px;
-      border: 1px solid #90caf9;
-    }
+        h4 {
+            font-size: 2.2rem;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            color: #0b1b3a;
+            margin: 40px 0 25px 0;
+        }
+        
+        h4 span {
+            font-size: 2.6rem;
+        }
 
-    /* таблица */
-    table {
-      width: 100%;
-      border-collapse: separate;
-      border-spacing: 0;
-      border-radius: 32px;
-      overflow: hidden;
-      box-shadow: 0 25px 40px -12px #0f1a42;
-      background: white;
-      margin: 30px 0 20px;
-    }
+        h5 {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #0f2647;
+            margin-bottom: 15px;
+            border-left: 6px solid #00bcd4;
+            padding-left: 20px;
+        }
 
-    th {
-      background: #1a237e;
-      color: white;
-      font-weight: 700;
-      font-size: 1.2rem;
-      padding: 22px 20px;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-    }
-    
-    th:first-child { border-radius: 28px 0 0 0; }
-    th:last-child { border-radius: 0 28px 0 0; }
+        /* КАРТОЧКИ */
+        .arch-card {
+            border-left: 8px solid;
+            padding: 28px 30px;
+            background: white;
+            margin-bottom: 28px;
+            border-radius: 30px 18px 18px 30px;
+            box-shadow: 0 20px 35px -8px rgba(0, 20, 40, 0.15);
+            transition: box-shadow 0.3s ease, margin-left 0.3s ease;
+            border-right: 1px solid rgba(0,0,0,0.03);
+        }
+        
+        .arch-card:hover {
+            margin-left: 12px;
+            box-shadow: 0 28px 45px -8px rgba(26, 35, 126, 0.25);
+        }
 
-    td {
-      padding: 20px 18px;
-      background: white;
-      border-bottom: 1px solid #dce5f2;
-      font-size: 1.15rem;
-    }
-    
-    tr:last-child td:first-child { border-radius: 0 0 0 28px; }
-    tr:last-child td:last-child { border-radius: 0 0 28px 0; }
-    tr:last-child td { border-bottom: none; }
+        .arch-card p {
+            font-size: 1.18rem;
+            margin: 12px 0;
+            display: flex;
+            align-items: baseline;
+        }
+        
+        .arch-card p strong {
+            min-width: 170px;
+            color: #1a237e;
+            font-weight: 700;
+            font-size: 1.1rem;
+            background: #ecf0ff;
+            padding: 4px 15px;
+            border-radius: 40px;
+            margin-right: 15px;
+            text-align: center;
+        }
+        
+        .model-tag {
+            background: #e3f2fd;
+            color: #0d47a1;
+            padding: 8px 25px;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1rem;
+            display: inline-block;
+            margin-top: 16px;
+            border: 1px solid #90caf9;
+        }
 
-    .energy-red, .energy-yellow, .energy-green {
-      font-weight: 600;
-      padding: 8px 20px;
-      border-radius: 40px;
-      background: #ffeae9;
-      color: #b71c1c;
-      display: inline-block;
-    }
-    
-    .energy-yellow {
-      background: #fff1cf;
-      color: #b45f06;
-    }
-    
-    .energy-green {
-      background: #dcf2dd;
-      color: #1e5a2b;
-    }
+        /* таблица */
+        table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0;
+            border-radius: 32px;
+            overflow: hidden;
+            box-shadow: 0 25px 40px -12px #0f1a42;
+            background: white;
+            margin: 30px 0 20px;
+        }
 
-    /* список инноваций - исправленная анимация */
-    .innov-list {
-      list-style: none;
-      padding: 0;
-    }
-    
-    .innov-item {
-      border-left: 6px solid;
-      padding: 22px 30px;
-      background: white;
-      margin-bottom: 18px;
-      border-radius: 30px 18px 18px 30px;
-      font-size: 1.2rem;
-      font-weight: 500;
-      box-shadow: 0 10px 25px -8px rgba(0,0,0,0.1);
-      transition: box-shadow 0.25s ease, padding-left 0.25s ease; /* Только безопасные свойства */
-    }
-    
-    .innov-item:hover {
-      padding-left: 40px; /* Визуальный сдвиг без transform */
-      box-shadow: 0 20px 30px -8px rgba(26, 35, 126, 0.2);
-      background: #fafcff;
-    }
-    
-    .innov-item strong {
-      color: #0d2f5c;
-      font-weight: 800;
-    }
+        th {
+            background: #1a237e;
+            color: white;
+            font-weight: 700;
+            font-size: 1.2rem;
+            padding: 22px 20px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        th:first-child { border-radius: 28px 0 0 0; }
+        th:last-child { border-radius: 0 28px 0 0; }
 
-    /* сноска */
-    .footnote {
-      background: #e9ecf8;
-      border-radius: 48px;
-      padding: 22px 30px;
-      margin-top: 40px;
-      color: #232f5e;
-      border: 2px dashed #3f51b5;
-      font-style: italic;
-      font-size: 1.15rem;
-      text-align: center;
-    }
+        td {
+            padding: 20px 18px;
+            background: white;
+            border-bottom: 1px solid #dce5f2;
+            font-size: 1.15rem;
+        }
+        
+        tr:last-child td:first-child { border-radius: 0 0 0 28px; }
+        tr:last-child td:last-child { border-radius: 0 0 28px 0; }
+        tr:last-child td { border-bottom: none; }
 
-    .feature-section {
-      margin: 50px 0;
-      position: relative;
-    }
+        .energy-red, .energy-yellow, .energy-green {
+            font-weight: 600;
+            padding: 8px 20px;
+            border-radius: 40px;
+            background: #ffeae9;
+            color: #b71c1c;
+            display: inline-block;
+        }
+        
+        .energy-yellow {
+            background: #fff1cf;
+            color: #b45f06;
+        }
+        
+        .energy-green {
+            background: #dcf2dd;
+            color: #1e5a2b;
+        }
 
-    /* цветные полосы для карточек */
-    .arch-card:nth-child(1) { border-left-color: #2e7d32; }
-    .arch-card:nth-child(2) { border-left-color: #1565c0; }
-    .arch-card:nth-child(3) { border-left-color: #ef6c00; }
-    .arch-card:nth-child(4) { border-left-color: #8e24aa; }
-    .arch-card:nth-child(5) { border-left-color: #c62828; }
+        /* список инноваций */
+        .innov-list {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .innov-item {
+            border-left: 6px solid;
+            padding: 22px 30px;
+            background: white;
+            margin-bottom: 18px;
+            border-radius: 30px 18px 18px 30px;
+            font-size: 1.2rem;
+            font-weight: 500;
+            box-shadow: 0 10px 25px -8px rgba(0,0,0,0.1);
+            transition: box-shadow 0.25s ease, padding-left 0.25s ease;
+        }
+        
+        .innov-item:hover {
+            padding-left: 40px;
+            box-shadow: 0 20px 30px -8px rgba(26, 35, 126, 0.2);
+            background: #fafcff;
+        }
+        
+        .innov-item strong {
+            color: #0d2f5c;
+            font-weight: 800;
+        }
 
-    /* адаптив */
-    @media (max-width: 700px) {
-      .sidebar { padding: 30px 20px; }
-      h3 { font-size: 2.2rem; }
-      h4 { font-size: 1.8rem; flex-wrap: wrap; }
-      .arch-card p { flex-wrap: wrap; }
-      .arch-card p strong { min-width: 100%; margin-bottom: 5px; }
-      th, td { padding: 15px 10px; font-size: 1rem; }
-      
-      /* На мобильных устройствах убираем сдвиг при наведении */
-      .arch-card:hover {
-        margin-left: 0;
-        box-shadow: 0 28px 45px -8px rgba(26, 35, 126, 0.25);
-      }
-      
-      .innov-item:hover {
-        padding-left: 30px;
-      }
-    }
-    
-    /* Дополнительная оптимизация для четкости текста */
-    .arch-card, .innov-item, .back-button, table, .footnote {
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
-      text-rendering: optimizeLegibility;
-    }
-  </style>
+        /* сноска */
+        .footnote {
+            background: #e9ecf8;
+            border-radius: 48px;
+            padding: 22px 30px;
+            margin-top: 40px;
+            color: #232f5e;
+            border: 2px dashed #3f51b5;
+            font-style: italic;
+            font-size: 1.15rem;
+            text-align: center;
+        }
+
+        .feature-section {
+            margin: 50px 0;
+            position: relative;
+        }
+
+        /* цветные полосы для карточек */
+        .arch-card:nth-child(1) { border-left-color: #2e7d32; }
+        .arch-card:nth-child(2) { border-left-color: #1565c0; }
+        .arch-card:nth-child(3) { border-left-color: #ef6c00; }
+        .arch-card:nth-child(4) { border-left-color: #8e24aa; }
+        .arch-card:nth-child(5) { border-left-color: #c62828; }
+
+        /* адаптив */
+        @media (max-width: 700px) {
+            .sidebar { padding: 30px 20px; }
+            h3 { font-size: 2.2rem; }
+            h4 { font-size: 1.8rem; flex-wrap: wrap; }
+            .arch-card p { flex-wrap: wrap; }
+            .arch-card p strong { min-width: 100%; margin-bottom: 5px; }
+            th, td { padding: 15px 10px; font-size: 1rem; }
+            
+            .arch-card:hover {
+                margin-left: 0;
+                box-shadow: 0 28px 45px -8px rgba(26, 35, 126, 0.25);
+            }
+            
+            .innov-item:hover {
+                padding-left: 30px;
+            }
+        }
+        
+        .arch-card, .innov-item, .back-button, table, .footnote {
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            text-rendering: optimizeLegibility;
+        }
+    </style>
 </head>
 <body>
 <div class="wrapper">
-  <!-- КНОПКА ВОЗВРАТА -->
-  <div class="back-home">
-    <a href="index.html" class="back-button"> Вернуться на главную</a>
-  </div>
-
-  <!-- ОСНОВНОЙ КОНТЕНТ -->
-  <div class="sidebar">
-    <h3>🚀 Самые популярные и эффективные нейросети (2024)</h3>
-
-    <!-- ТОП-5 архитектур -->
-    <div class="feature-section">
-      <h4><span>🏆</span> Топ‑5 архитектур по эффективности</h4>
-      <div>
-        <div class="arch-card">
-          <h5>1. Трансформеры (Transformers)</h5>
-          <p><strong>Эффективность:</strong> 95-98% точность в NLP задачах</p>
-          <p><strong>Популярные модели:</strong> GPT-4, Claude 3, Gemini Ultra, LLaMA 3</p>
-          <p><strong>Ключевое преимущество:</strong> Механизм внимания (attention), позволяющий обрабатывать длинные последовательности</p>
-          <span class="model-tag">#attention_is_all_you_need</span>
-        </div>
-        
-        <div class="arch-card">
-          <h5>2. Диффузионные модели (Diffusion Models)</h5>
-          <p><strong>Эффективность:</strong> Лучшие результаты в генерации изображений</p>
-          <p><strong>Популярные модели:</strong> DALL‑E 3, Stable Diffusion 3, Midjourney v6</p>
-          <p><strong>Ключевое преимущество:</strong> Высокое качество и разнообразие генерируемых изображений</p>
-          <span class="model-tag">#image_gen</span>
-        </div>
-        
-        <div class="arch-card">
-          <h5>3. Мультимодальные сети</h5>
-          <p><strong>Эффективность:</strong> 89-94% точность в кросс‑модальных задачах</p>
-          <p><strong>Популярные модели:</strong> GPT‑4V, Gemini Pro Vision, CLIP</p>
-          <p><strong>Ключевое преимущество:</strong> Понимание и связь разных типов данных (текст, изображения, аудио)</p>
-          <span class="model-tag">#multimodal</span>
-        </div>
-        
-        <div class="arch-card">
-          <h5>4. Сверточные нейросети нового поколения</h5>
-          <p><strong>Эффективность:</strong> 99.1% на ImageNet для классификации</p>
-          <p><strong>Популярные модели:</strong> ConvNeXt, EfficientNetV2, RegNet</p>
-          <p><strong>Ключевое преимущество:</strong> Оптимизированы для computer vision с меньшим потреблением ресурсов</p>
-          <span class="model-tag">#cv</span>
-        </div>
-        
-        <div class="arch-card">
-          <h5>5. Ретривальные модели (Retrieval-Augmented)</h5>
-          <p><strong>Эффективность:</strong> На 40% точнее в задачах, требующих фактологической проверки</p>
-          <p><strong>Популярные модели:</strong> RETRO, Atlas, RAG‑системы</p>
-          <p><strong>Ключевое преимущество:</strong> Доступ к внешним базам знаний, снижение "галлюцинаций"</p>
-          <span class="model-tag">#RAG</span>
-        </div>
-      </div>
+    <!-- КНОПКА ВОЗВРАТА -->
+    <div class="back-home">
+        <a href="index.html" class="back-button"> Вернуться на главную</a>
     </div>
 
-    <!-- СРАВНИТЕЛЬНАЯ ТАБЛИЦА -->
-    <div class="feature-section">
-      <h4><span>📊</span> Сравнительные характеристики</h4>
-      <table>
-        <thead>
-          <tr>
-            <th>Архитектура</th>
-            <th>Параметры</th>
-            <th>Точность*</th>
-            <th>Энергоэфф.</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr><td><strong>GPT-4 (Transformer)</strong></td><td>~1.8 трлн</td><td>86.4%</td><td><span class="energy-red">🔴 Низкая</span></td></tr>
-          <tr><td><strong>Gemini Ultra (Multimodal)</strong></td><td>~1.6 трлн</td><td>90.0%</td><td><span class="energy-yellow">🟡 Средняя</span></td></tr>
-          <tr><td><strong>Claude 3 Opus</strong></td><td>~1.4 трлн</td><td>88.7%</td><td><span class="energy-yellow">🟡 Средняя</span></td></tr>
-          <tr><td><strong>LLaMA 3 70B</strong></td><td>70 млрд</td><td>82.0%</td><td><span class="energy-green">🟢 Высокая</span></td></tr>
-          <tr><td><strong>Mixtral 8x7B (MoE)</strong></td><td>47 млрд акт.</td><td>85.2%</td><td><span class="energy-green">🟢 Высокая</span></td></tr>
-        </tbody>
-      </table>
-      <div class="footnote">
-        *Точность на тесте MMLU (Massive Multitask Language Understanding)<br>
-        MoE — Mixture of Experts (Смесь экспертов)
-      </div>
-    </div>
+    <!-- ОСНОВНОЙ КОНТЕНТ -->
+    <div class="sidebar">
+        <h3>🚀 Самые популярные и эффективные нейросети (2024)</h3>
 
-    <!-- ПРОРЫВНЫЕ ИННОВАЦИИ -->
-    <div class="feature-section">
-      <h4><span>🚀</span> Прорывные инновации 2023–2024</h4>
-      <ul class="innov-list">
-        <li class="innov-item" style="border-left-color: #4caf50;"><strong>MoE (Mixture of Experts):</strong> Разные части сети активируются для разных задач, снижение вычислений на 70%.</li>
-        <li class="innov-item" style="border-left-color: #2196f3;"><strong>State Space Models (SSM):</strong> Mamba и аналоги — линейная сложность вместо квадратичной у трансформеров.</li>
-        <li class="innov-item" style="border-left-color: #ff9800;"><strong>Обработка длинного контекста:</strong> Модели с контекстом до 1 млн токенов (Claude 3).</li>
-        <li class="innov-item" style="border-left-color: #9c27b0;"><strong>Стохастическая глубина:</strong> Динамическое отключение слоёв при обучении для ускорения и регуляризации.</li>
-        <li class="innov-item" style="border-left-color: #f44336;"><strong>Кросс-модальное внимание:</strong> Единый механизм внимания для разных типов данных без конкатенации.</li>
-      </ul>
-    </div>
+        <!-- ТОП-5 архитектур -->
+        <div class="feature-section">
+            <h4><span>🏆</span> Топ‑5 архитектур по эффективности</h4>
+            <div>
+                <div class="arch-card">
+                    <h5>1. Трансформеры (Transformers)</h5>
+                    <p><strong>Эффективность:</strong> 95-98% точность в NLP задачах</p>
+                    <p><strong>Популярные модели:</strong> GPT-4, Claude 3, Gemini Ultra, LLaMA 3</p>
+                    <p><strong>Ключевое преимущество:</strong> Механизм внимания (attention), позволяющий обрабатывать длинные последовательности</p>
+                    <span class="model-tag">#attention_is_all_you_need</span>
+                </div>
+                
+                <div class="arch-card">
+                    <h5>2. Диффузионные модели (Diffusion Models)</h5>
+                    <p><strong>Эффективность:</strong> Лучшие результаты в генерации изображений</p>
+                    <p><strong>Популярные модели:</strong> DALL‑E 3, Stable Diffusion 3, Midjourney v6</p>
+                    <p><strong>Ключевое преимущество:</strong> Высокое качество и разнообразие генерируемых изображений</p>
+                    <span class="model-tag">#image_gen</span>
+                </div>
+                
+                <div class="arch-card">
+                    <h5>3. Мультимодальные сети</h5>
+                    <p><strong>Эффективность:</strong> 89-94% точность в кросс‑модальных задачах</p>
+                    <p><strong>Популярные модели:</strong> GPT‑4V, Gemini Pro Vision, CLIP</p>
+                    <p><strong>Ключевое преимущество:</strong> Понимание и связь разных типов данных (текст, изображения, аудио)</p>
+                    <span class="model-tag">#multimodal</span>
+                </div>
+                
+                <div class="arch-card">
+                    <h5>4. Сверточные нейросети нового поколения</h5>
+                    <p><strong>Эффективность:</strong> 99.1% на ImageNet для классификации</p>
+                    <p><strong>Популярные модели:</strong> ConvNeXt, EfficientNetV2, RegNet</p>
+                    <p><strong>Ключевое преимущество:</strong> Оптимизированы для computer vision с меньшим потреблением ресурсов</p>
+                    <span class="model-tag">#cv</span>
+                </div>
+                
+                <div class="arch-card">
+                    <h5>5. Ретривальные модели (Retrieval-Augmented)</h5>
+                    <p><strong>Эффективность:</strong> На 40% точнее в задачах, требующих фактологической проверки</p>
+                    <p><strong>Популярные модели:</strong> RETRO, Atlas, RAG‑системы</p>
+                    <p><strong>Ключевое преимущество:</strong> Доступ к внешним базам знаний, снижение "галлюцинаций"</p>
+                    <span class="model-tag">#RAG</span>
+                </div>
+            </div>
+        </div>
 
-    <!-- Блок трендов -->
-    <div style="background: linear-gradient(115deg, #e7ebff, #d4defa); border-radius: 42px; padding: 40px; margin-top: 50px;">
-      <h4 style="margin-top: 0;"><span>🔮</span> Взгляд в завтра: тренды 2025</h4>
-      <div style="display: flex; flex-wrap: wrap; gap: 25px;">
-        <span style="background: #1a237e; color: white; padding: 15px 30px; border-radius: 60px; font-size: 1.3rem;">⚡ нейроморфные чипы</span>
-        <span style="background: #283593; color: white; padding: 15px 30px; border-radius: 60px; font-size: 1.3rem;">🌐 сверхдлинный контекст</span>
-        <span style="background: #3949ab; color: white; padding: 15px 30px; border-radius: 60px; font-size: 1.3rem;">🧩 самообучающиеся агенты</span>
-        <span style="background: #1e3a8a; color: white; padding: 15px 30px; border-radius: 60px; font-size: 1.3rem;">💧 зелёный ИИ</span>
-      </div>
-      <p style="margin-top: 30px; font-size: 1.2rem; background: white; border-radius: 38px; padding: 22px; border: 2px solid #00bcd4;">
-        <strong>Энергоэффективность</strong> становится главным конкурентным преимуществом. Модели, которые требуют меньше ресурсов, будут доминировать.
-      </p>
+        <!-- СРАВНИТЕЛЬНАЯ ТАБЛИЦА -->
+        <div class="feature-section">
+            <h4><span>📊</span> Сравнительные характеристики</h4>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Архитектура</th>
+                        <th>Параметры</th>
+                        <th>Точность*</th>
+                        <th>Энергоэфф.</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td><strong>GPT-4 (Transformer)</strong></td><td>~1.8 трлн</td><td>86.4%</td><td><span class="energy-red">🔴 Низкая</span></td></tr>
+                    <tr><td><strong>Gemini Ultra (Multimodal)</strong></td><td>~1.6 трлн</td><td>90.0%</td><td><span class="energy-yellow">🟡 Средняя</span></td></tr>
+                    <tr><td><strong>Claude 3 Opus</strong></td><td>~1.4 трлн</td><td>88.7%</td><td><span class="energy-yellow">🟡 Средняя</span></td></tr>
+                    <tr><td><strong>LLaMA 3 70B</strong></td><td>70 млрд</td><td>82.0%</td><td><span class="energy-green">🟢 Высокая</span></td></tr>
+                    <tr><td><strong>Mixtral 8x7B (MoE)</strong></td><td>47 млрд акт.</td><td>85.2%</td><td><span class="energy-green">🟢 Высокая</span></td></tr>
+                </tbody>
+            </table>
+            <div class="footnote">
+                *Точность на тесте MMLU (Massive Multitask Language Understanding)<br>
+                MoE — Mixture of Experts (Смесь экспертов)
+            </div>
+        </div>
+
+        <!-- ПРОРЫВНЫЕ ИННОВАЦИИ -->
+        <div class="feature-section">
+            <h4><span>🚀</span> Прорывные инновации 2023–2024</h4>
+            <ul class="innov-list">
+                <li class="innov-item" style="border-left-color: #4caf50;"><strong>MoE (Mixture of Experts):</strong> Разные части сети активируются для разных задач, снижение вычислений на 70%.</li>
+                <li class="innov-item" style="border-left-color: #2196f3;"><strong>State Space Models (SSM):</strong> Mamba и аналоги — линейная сложность вместо квадратичной у трансформеров.</li>
+                <li class="innov-item" style="border-left-color: #ff9800;"><strong>Обработка длинного контекста:</strong> Модели с контекстом до 1 млн токенов (Claude 3).</li>
+                <li class="innov-item" style="border-left-color: #9c27b0;"><strong>Стохастическая глубина:</strong> Динамическое отключение слоёв при обучении для ускорения и регуляризации.</li>
+                <li class="innov-item" style="border-left-color: #f44336;"><strong>Кросс-модальное внимание:</strong> Единый механизм внимания для разных типов данных без конкатенации.</li>
+            </ul>
+        </div>
+
+        <!-- Блок трендов -->
+        <div style="background: linear-gradient(115deg, #e7ebff, #d4defa); border-radius: 42px; padding: 40px; margin-top: 50px;">
+            <h4 style="margin-top: 0;"><span>🔮</span> Взгляд в завтра: тренды 2025</h4>
+            <div style="display: flex; flex-wrap: wrap; gap: 25px;">
+                <span style="background: #1a237e; color: white; padding: 15px 30px; border-radius: 60px; font-size: 1.3rem;">⚡ нейроморфные чипы</span>
+                <span style="background: #283593; color: white; padding: 15px 30px; border-radius: 60px; font-size: 1.3rem;">🌐 сверхдлинный контекст</span>
+                <span style="background: #3949ab; color: white; padding: 15px 30px; border-radius: 60px; font-size: 1.3rem;">🧩 самообучающиеся агенты</span>
+                <span style="background: #1e3a8a; color: white; padding: 15px 30px; border-radius: 60px; font-size: 1.3rem;">💧 зелёный ИИ</span>
+            </div>
+            <p style="margin-top: 30px; font-size: 1.2rem; background: white; border-radius: 38px; padding: 22px; border: 2px solid #00bcd4;">
+                <strong>Энергоэффективность</strong> становится главным конкурентным преимуществом. Модели, которые требуют меньше ресурсов, будут доминировать.
+            </p>
+        </div>
     </div>
-  </div>
 </div>
 </body>
 </html>
-
-
