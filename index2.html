@@ -1,132 +1,379 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html><head>
-  <title>Самые популярные и эффективные нейросети</title>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Топ нейросетей 2024 — эффективность и инновации</title>
+  <!-- подключаем тот же шрифт и стили, что в index.html для единства -->
+  <style>
+    /* Глобальные стили (перекликаются с index.html) */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-  
-</head><body>
-<div class="sidebar">
-    <!-- НОВЫЙ РАЗДЕЛ: Популярные и эффективные нейросети -->
-    <h3 style="margin-top: 80px;">Самые популярные и эффективные нейросети (2024)</h3>
-    <div class="feature-section" style="margin: 30px 0pt;">
-        <h4 style="color: rgb(26, 35, 126); margin-bottom: 20px;">
-            <span style="">🏆</span> Топ-5 архитектур по эффективности
-        </h4>
-        
-        <div style="margin-top: 20px;">
-            <div style="border-left: 5px solid rgb(76, 175, 80); padding: 20px; background: white none repeat scroll 0% 50%; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial;">
-                <h5 style="color: rgb(26, 35, 126); margin-bottom: 10px;">1. Трансформеры (Transformers)</h5>
-                <p><strong>Эффективность:</strong> 95-98% точность в NLP задачах</p>
-                <p><strong>Популярные модели:</strong> GPT-4, Claude 3, Gemini Ultra, LLaMA 3</p>
-                <p><strong>Ключевое преимущество:</strong> Механизм внимания (attention), позволяющий обрабатывать длинные последовательности</p>
-            </div>
-            
-            <div style="border-left: 5px solid rgb(33, 150, 243); padding: 20px; background: white none repeat scroll 0% 50%; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial;">
-                <h5 style="color: rgb(26, 35, 126); margin-bottom: 10px;">2. Диффузионные модели (Diffusion Models)</h5>
-                <p><strong>Эффективность:</strong> Лучшие результаты в генерации изображений</p>
-                <p><strong>Популярные модели:</strong> DALL-E 3, Stable Diffusion 3, Midjourney v6</p>
-                <p><strong>Ключевое преимущество:</strong> Высокое качество и разнообразие генерируемых изображений</p>
-            </div>
-            
-            <div style="border-left: 5px solid rgb(255, 152, 0); padding: 20px; background: white none repeat scroll 0% 50%; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial;">
-                <h5 style="color: rgb(26, 35, 126); margin-bottom: 10px;">3. Мультимодальные сети</h5>
-                <p><strong>Эффективность:</strong> 89-94% точность в кросс-модальных задачах</p>
-                <p><strong>Популярные модели:</strong> GPT-4V, Gemini Pro Vision, CLIP</p>
-                <p><strong>Ключевое преимущество:</strong> Способность понимать и связывать разные типы данных (текст, изображения, аудио)</p>
-            </div>
-            
-            <div style="border-left: 5px solid rgb(156, 39, 176); padding: 20px; background: white none repeat scroll 0% 50%; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial;">
-                <h5 style="color: rgb(26, 35, 126); margin-bottom: 10px;">4. Сверточные нейросети нового поколения</h5>
-                <p><strong>Эффективность:</strong> 99.1% на ImageNet для классификации</p>
-                <p><strong>Популярные модели:</strong> ConvNeXt, EfficientNetV2, RegNet</p>
-                <p><strong>Ключевое преимущество:</strong> Оптимизированные архитектуры для компьютерного зрения с меньшим потреблением ресурсов</p>
-            </div>
-            
-            <div style="border-left: 5px solid rgb(244, 67, 54); padding: 20px; background: white none repeat scroll 0% 50%; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial;">
-                <h5 style="color: rgb(26, 35, 126); margin-bottom: 10px;">5. Ретривальные модели (Retrieval-Augmented)</h5>
-                <p><strong>Эффективность:</strong> На 40% точнее в задачах, требующих фактологической проверки</p>
-                <p><strong>Популярные модели:</strong> RETRO, Atlas, RAG-системы</p>
-                <p><strong>Ключевое преимущество:</strong> Доступ к внешним базам знаний, снижение "галлюцинаций"</p>
-            </div>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(145deg, #eef2f7 0%, #d0d9f0 100%);
+      color: #1a1f36;
+      line-height: 1.6;
+      min-height: 100vh;
+      padding: 30px 20px;
+    }
+
+    .wrapper {
+      max-width: 1300px;
+      margin: 0 auto;
+    }
+
+    /* Кнопка возврата на главную — стилизована как nav-button из index */
+    .back-home {
+      margin-bottom: 25px;
+    }
+    .back-button {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      background: linear-gradient(135deg, #1a237e 0%, #283593 80%);
+      color: white;
+      text-decoration: none;
+      font-size: 1.3rem;
+      font-weight: 600;
+      padding: 16px 36px;
+      border-radius: 50px;
+      box-shadow: 0 8px 22px rgba(26, 35, 126, 0.4);
+      border: 2px solid rgba(255, 255, 255, 0.25);
+      transition: all 0.3s ease;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+    }
+    .back-button::before {
+      content: '◀';
+      font-size: 1.6rem;
+      transition: transform 0.2s;
+    }
+    .back-button:hover {
+      background: linear-gradient(135deg, #0f1550, #1a237e);
+      transform: translateX(-8px) scale(1.02);
+      box-shadow: 0 12px 30px rgba(26, 35, 126, 0.6);
+      border-color: rgba(255,255,255,0.5);
+    }
+    .back-button:hover::before {
+      transform: translateX(-4px);
+    }
+
+    /* основной блок sidebar теперь выглядит как современный карточный контейнер */
+    .sidebar {
+      background: rgba(255, 255, 255, 0.85);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-radius: 56px 56px 48px 48px;
+      padding: 50px 45px;
+      box-shadow: 0 35px 65px -15px rgba(26, 35, 126, 0.3);
+      border: 2px solid rgba(255, 255, 255, 0.7);
+      transition: all 0.2s;
+    }
+
+    h3 {
+      font-size: 2.8rem;
+      font-weight: 800;
+      background: linear-gradient(145deg, #1a237e, #283593);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin: 0 0 15px 0;
+      letter-spacing: -0.02em;
+      border-bottom: 4px solid #00bcd4;
+      padding-bottom: 20px;
+      display: inline-block;
+    }
+
+    h4 {
+      font-size: 2.2rem;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      color: #0b1b3a;
+      margin: 40px 0 25px 0;
+    }
+    h4 span {
+      font-size: 2.6rem;
+    }
+
+    h5 {
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: #0f2647;
+      margin-bottom: 15px;
+      border-left: 6px solid #00bcd4;
+      padding-left: 20px;
+    }
+
+    /* карточки архитектур — с глянцем и анимацией */
+    .arch-card {
+      border-left: 8px solid;
+      padding: 28px 30px;
+      background: white;
+      margin-bottom: 28px;
+      border-radius: 30px 18px 18px 30px;
+      box-shadow: 0 20px 35px -8px rgba(0, 20, 40, 0.15);
+      transition: all 0.3s cubic-bezier(0.2, 0.9, 0.4, 1);
+      backdrop-filter: blur(4px);
+      border-right: 1px solid rgba(0,0,0,0.03);
+    }
+    .arch-card:hover {
+      transform: translateX(12px) scale(1.01);
+      box-shadow: 0 28px 45px -8px rgba(26, 35, 126, 0.25);
+    }
+
+    .arch-card p {
+      font-size: 1.18rem;
+      margin: 12px 0;
+      display: flex;
+      align-items: baseline;
+    }
+    .arch-card p strong {
+      min-width: 170px;
+      color: #1a237e;
+      font-weight: 700;
+      font-size: 1.1rem;
+      background: #ecf0ff;
+      padding: 4px 15px;
+      border-radius: 40px;
+      margin-right: 15px;
+      text-align: center;
+    }
+    .model-tag {
+      background: #e3f2fd;
+      color: #0d47a1;
+      padding: 8px 25px;
+      border-radius: 50px;
+      font-weight: 600;
+      font-size: 1rem;
+      display: inline-block;
+      margin-top: 16px;
+      border: 1px solid #90caf9;
+    }
+
+    /* таблица в стиле index (глянец) */
+    table {
+      width: 100%;
+      border-collapse: separate;
+      border-spacing: 0;
+      border-radius: 32px;
+      overflow: hidden;
+      box-shadow: 0 25px 40px -12px #0f1a42;
+      background: white;
+      margin: 30px 0 20px;
+    }
+
+    th {
+      background: #1a237e;
+      color: white;
+      font-weight: 700;
+      font-size: 1.2rem;
+      padding: 22px 20px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    th:first-child { border-radius: 28px 0 0 0; }
+    th:last-child { border-radius: 0 28px 0 0; }
+
+    td {
+      padding: 20px 18px;
+      background: white;
+      border-bottom: 1px solid #dce5f2;
+      font-size: 1.15rem;
+    }
+    tr:last-child td:first-child { border-radius: 0 0 0 28px; }
+    tr:last-child td:last-child { border-radius: 0 0 28px 0; }
+    tr:last-child td { border-bottom: none; }
+
+    .energy-red, .energy-yellow, .energy-green {
+      font-weight: 600;
+      padding: 8px 20px;
+      border-radius: 40px;
+      background: #ffeae9;
+      color: #b71c1c;
+      display: inline-block;
+    }
+    .energy-yellow {
+      background: #fff1cf;
+      color: #b45f06;
+    }
+    .energy-green {
+      background: #dcf2dd;
+      color: #1e5a2b;
+    }
+
+    /* список инноваций + иконки */
+    .innov-list {
+      list-style: none;
+      padding: 0;
+    }
+    .innov-item {
+      border-left: 6px solid;
+      padding: 22px 30px;
+      background: white;
+      margin-bottom: 18px;
+      border-radius: 30px 18px 18px 30px;
+      font-size: 1.2rem;
+      font-weight: 500;
+      box-shadow: 0 10px 25px -8px rgba(0,0,0,0.1);
+      transition: all 0.25s;
+    }
+    .innov-item:hover {
+      transform: translateX(8px);
+      background: #fafcff;
+    }
+    .innov-item strong {
+      color: #0d2f5c;
+      font-weight: 800;
+    }
+
+    /* сноска */
+    .footnote {
+      background: #e9ecf8;
+      border-radius: 48px;
+      padding: 22px 30px;
+      margin-top: 40px;
+      color: #232f5e;
+      border: 2px dashed #3f51b5;
+      font-style: italic;
+      font-size: 1.15rem;
+      text-align: center;
+    }
+
+    /* дополнительные акценты как на index */
+    .feature-section {
+      margin: 50px 0;
+      position: relative;
+    }
+
+    /* эмодзи и цветные полосы */
+    .arch-card:nth-child(1) { border-left-color: #2e7d32; }
+    .arch-card:nth-child(2) { border-left-color: #1565c0; }
+    .arch-card:nth-child(3) { border-left-color: #ef6c00; }
+    .arch-card:nth-child(4) { border-left-color: #8e24aa; }
+    .arch-card:nth-child(5) { border-left-color: #c62828; }
+
+    /* адаптив */
+    @media (max-width: 700px) {
+      .sidebar { padding: 30px 20px; }
+      h3 { font-size: 2.2rem; }
+      h4 { font-size: 1.8rem; flex-wrap: wrap; }
+      .arch-card p { flex-wrap: wrap; }
+      .arch-card p strong { min-width: 100%; margin-bottom: 5px; }
+      th, td { padding: 15px 10px; font-size: 1rem; }
+    }
+  </style>
+</head>
+<body>
+<div class="wrapper">
+  <!-- КНОПКА ВОЗВРАТА НА ГЛАВНУЮ (index.html) -->
+  <div class="back-home">
+    <a href="index.html" class="back-button"> Вернуться на главную</a>
+  </div>
+
+  <!-- ОСНОВНОЙ КОНТЕНТ (улучшенный index2) -->
+  <div class="sidebar">
+    <h3>🚀 Самые популярные и эффективные нейросети (2024)</h3>
+
+    <!-- ТОП-5 архитектур -->
+    <div class="feature-section">
+      <h4><span>🏆</span> Топ‑5 архитектур по эффективности</h4>
+      <div>
+        <div class="arch-card">
+          <h5>1. Трансформеры (Transformers)</h5>
+          <p><strong>Эффективность:</strong> 95-98% точность в NLP задачах</p>
+          <p><strong>Популярные модели:</strong> GPT-4, Claude 3, Gemini Ultra, LLaMA 3</p>
+          <p><strong>Ключевое преимущество:</strong> Механизм внимания (attention), позволяющий обрабатывать длинные последовательности</p>
+          <span class="model-tag">#attention_is_all_you_need</span>
         </div>
+        <div class="arch-card">
+          <h5>2. Диффузионные модели (Diffusion Models)</h5>
+          <p><strong>Эффективность:</strong> Лучшие результаты в генерации изображений</p>
+          <p><strong>Популярные модели:</strong> DALL‑E 3, Stable Diffusion 3, Midjourney v6</p>
+          <p><strong>Ключевое преимущество:</strong> Высокое качество и разнообразие генерируемых изображений</p>
+          <span class="model-tag">#image_gen</span>
+        </div>
+        <div class="arch-card">
+          <h5>3. Мультимодальные сети</h5>
+          <p><strong>Эффективность:</strong> 89-94% точность в кросс‑модальных задачах</p>
+          <p><strong>Популярные модели:</strong> GPT‑4V, Gemini Pro Vision, CLIP</p>
+          <p><strong>Ключевое преимущество:</strong> Понимание и связь разных типов данных (текст, изображения, аудио)</p>
+          <span class="model-tag">#multimodal</span>
+        </div>
+        <div class="arch-card">
+          <h5>4. Сверточные нейросети нового поколения</h5>
+          <p><strong>Эффективность:</strong> 99.1% на ImageNet для классификации</p>
+          <p><strong>Популярные модели:</strong> ConvNeXt, EfficientNetV2, RegNet</p>
+          <p><strong>Ключевое преимущество:</strong> Оптимизированы для computer vision с меньшим потреблением ресурсов</p>
+          <span class="model-tag">#cv</span>
+        </div>
+        <div class="arch-card">
+          <h5>5. Ретривальные модели (Retrieval-Augmented)</h5>
+          <p><strong>Эффективность:</strong> На 40% точнее в задачах, требующих фактологической проверки</p>
+          <p><strong>Популярные модели:</strong> RETRO, Atlas, RAG‑системы</p>
+          <p><strong>Ключевое преимущество:</strong> Доступ к внешним базам знаний, снижение "галлюцинаций"</p>
+          <span class="model-tag">#RAG</span>
+        </div>
+      </div>
     </div>
-    
-    <div class="feature-section" style="margin: 30px 0pt;">
-        <h4 style="color: rgb(26, 35, 126); margin-bottom: 20px;">
-            <span style="">📊</span> Сравнительные характеристики
-        </h4>
-        
-        <table style="width: 100%; border-collapse: collapse; margin-top: 15px;">
-            <thead>
-                <tr style="background: rgb(26, 35, 126) none repeat scroll 0% 50%; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial; color: white;">
-                    <th style="padding: 15px; text-align: left;">Архитектура</th>
-                    <th style="padding: 15px; text-align: center;">Параметры</th>
-                    <th style="padding: 15px; text-align: center;">Точность</th>
-                    <th style="padding: 15px; text-align: center;">Энергоэфф.</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr style="border-bottom: 1px solid rgb(224, 224, 224);">
-                    <td style="padding: 15px; font-weight: bold;">GPT-4 (Transformer)</td>
-                    <td style="padding: 15px; text-align: center;">~1.8 трлн</td>
-                    <td style="padding: 15px; text-align: center;">86.4%*</td>
-                    <td style="padding: 15px; text-align: center;">🔴 Низкая</td>
-                </tr>
-                <tr style="border-bottom: 1px solid rgb(224, 224, 224);">
-                    <td style="padding: 15px; font-weight: bold;">Gemini Ultra (Multimodal)</td>
-                    <td style="padding: 15px; text-align: center;">~1.6 трлн</td>
-                    <td style="padding: 15px; text-align: center;">90.0%*</td>
-                    <td style="padding: 15px; text-align: center;">🟡 Средняя</td>
-                </tr>
-                <tr style="border-bottom: 1px solid rgb(224, 224, 224);">
-                    <td style="padding: 15px; font-weight: bold;">Claude 3 Opus</td>
-                    <td style="padding: 15px; text-align: center;">~1.4 трлн</td>
-                    <td style="padding: 15px; text-align: center;">88.7%*</td>
-                    <td style="padding: 15px; text-align: center;">🟡 Средняя</td>
-                </tr>
-                <tr style="border-bottom: 1px solid rgb(224, 224, 224);">
-                    <td style="padding: 15px; font-weight: bold;">LLaMA 3 70B</td>
-                    <td style="padding: 15px; text-align: center;">70 млрд</td>
-                    <td style="padding: 15px; text-align: center;">82.0%*</td>
-                    <td style="padding: 15px; text-align: center;">🟢 Высокая</td>
-                </tr>
-                <tr>
-                    <td style="padding: 15px; font-weight: bold;">Mixtral 8x7B (MoE)</td>
-                    <td style="padding: 15px; text-align: center;">47 млрд акт.</td>
-                    <td style="padding: 15px; text-align: center;">85.2%*</td>
-                    <td style="padding: 15px; text-align: center;">🟢 Высокая</td>
-                </tr>
-            </tbody>
-        </table>
-        <p style="margin-top: 15px; color: rgb(102, 102, 102); font-style: italic;">
-            *Точность на тесте MMLU (Massive Multitask Language Understanding)<br>
-            MoE - Mixture of Experts (Смесь экспертов)
-        </p>
+
+    <!-- СРАВНИТЕЛЬНАЯ ТАБЛИЦА -->
+    <div class="feature-section">
+      <h4><span>📊</span> Сравнительные характеристики</h4>
+      <table>
+        <thead>
+          <tr>
+            <th>Архитектура</th>
+            <th>Параметры</th>
+            <th>Точность*</th>
+            <th>Энергоэфф.</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td><strong>GPT-4 (Transformer)</strong></td><td>~1.8 трлн</td><td>86.4%</td><td><span class="energy-red">🔴 Низкая</span></td></tr>
+          <tr><td><strong>Gemini Ultra (Multimodal)</strong></td><td>~1.6 трлн</td><td>90.0%</td><td><span class="energy-yellow">🟡 Средняя</span></td></tr>
+          <tr><td><strong>Claude 3 Opus</strong></td><td>~1.4 трлн</td><td>88.7%</td><td><span class="energy-yellow">🟡 Средняя</span></td></tr>
+          <tr><td><strong>LLaMA 3 70B</strong></td><td>70 млрд</td><td>82.0%</td><td><span class="energy-green">🟢 Высокая</span></td></tr>
+          <tr><td><strong>Mixtral 8x7B (MoE)</strong></td><td>47 млрд акт.</td><td>85.2%</td><td><span class="energy-green">🟢 Высокая</span></td></tr>
+        </tbody>
+      </table>
+      <div class="footnote">
+        *Точность на тесте MMLU (Massive Multitask Language Understanding)<br>
+        MoE — Mixture of Experts (Смесь экспертов)
+      </div>
     </div>
-    
-    <div class="feature-section" style="margin: 30px 0pt;">
-        <h4 style="color: rgb(26, 35, 126); margin-bottom: 20px;">
-            <span style="">🚀</span> Прорывные инновации 2023-2024
-        </h4>
-        
-        <ul style="list-style-type: none; list-style-image: none; list-style-position: outside; padding-left: 0pt;">
-            <li style="border-left: 4px solid rgb(76, 175, 80); padding: 15px; background: white none repeat scroll 0% 50%; margin-bottom: 10px; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial;">
-                <strong>MoE (Mixture of Experts):</strong> Архитектура, где разные части сети активируются для разных задач, снижая потребление вычислений на 70%
-            </li>
-            <li style="border-left: 4px solid rgb(33, 150, 243); padding: 15px; background: white none repeat scroll 0% 50%; margin-bottom: 10px; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial;">
-                <strong>State Space Models (SSM):</strong> Mamba и аналоги - линейная сложность вместо квадратичной у трансформеров
-            </li>
-            <li style="border-left: 4px solid rgb(255, 152, 0); padding: 15px; background: white none repeat scroll 0% 50%; margin-bottom: 10px; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial;">
-                <strong>Обработка длинного контекста:</strong> Модели, работающие с контекстом до 1 млн токенов (Claude 3)
-            </li>
-            <li style="border-left: 4px solid rgb(156, 39, 176); padding: 15px; background: white none repeat scroll 0% 50%; margin-bottom: 10px; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial;">
-                <strong>Стохастическая глубина:</strong> Динамическое отключение слоев во время обучения для ускорения и регуляризации
-            </li>
-            <li style="border-left: 4px solid rgb(244, 67, 54); padding: 15px; background: white none repeat scroll 0% 50%; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial;">
-                <strong>Кросс-модальное внимание:</strong> Единый механизм внимания для разных типов данных без конкатенации
-            </li>
-        </ul>
+
+    <!-- ПРОРЫВНЫЕ ИННОВАЦИИ -->
+    <div class="feature-section">
+      <h4><span>🚀</span> Прорывные инновации 2023–2024</h4>
+      <ul class="innov-list">
+        <li class="innov-item" style="border-left-color: #4caf50;"><strong>MoE (Mixture of Experts):</strong> Разные части сети активируются для разных задач, снижение вычислений на 70%.</li>
+        <li class="innov-item" style="border-left-color: #2196f3;"><strong>State Space Models (SSM):</strong> Mamba и аналоги — линейная сложность вместо квадратичной у трансформеров.</li>
+        <li class="innov-item" style="border-left-color: #ff9800;"><strong>Обработка длинного контекста:</strong> Модели с контекстом до 1 млн токенов (Claude 3).</li>
+        <li class="innov-item" style="border-left-color: #9c27b0;"><strong>Стохастическая глубина:</strong> Динамическое отключение слоёв при обучении для ускорения и регуляризации.</li>
+        <li class="innov-item" style="border-left-color: #f44336;"><strong>Кросс-модальное внимание:</strong> Единый механизм внимания для разных типов данных без конкатенации.</li>
+      </ul>
     </div>
+
+    <!-- Дополнительный блок (вдохновлён index): тренды будущего -->
+    <div style="background: linear-gradient(115deg, #e7ebff, #d4defa); border-radius: 42px; padding: 40px; margin-top: 50px;">
+      <h4 style="margin-top: 0;"><span>🔮</span> Взгляд в завтра: тренды 2025</h4>
+      <div style="display: flex; flex-wrap: wrap; gap: 25px;">
+        <span style="background: #1a237e; color: white; padding: 15px 30px; border-radius: 60px; font-size: 1.3rem;">⚡ нейроморфные чипы</span>
+        <span style="background: #283593; color: white; padding: 15px 30px; border-radius: 60px; font-size: 1.3rem;">🌐 сверхдлинный контекст</span>
+        <span style="background: #3949ab; color: white; padding: 15px 30px; border-radius: 60px; font-size: 1.3rem;">🧩 самообучающиеся агенты</span>
+        <span style="background: #1e3a8a; color: white; padding: 15px 30px; border-radius: 60px; font-size: 1.3rem;">💧 зелёный ИИ</span>
+      </div>
+      <p style="margin-top: 30px; font-size: 1.2rem; background: white; border-radius: 38px; padding: 22px; border: 2px solid #00bcd4;">
+        <strong>Энергоэффективность</strong> становится главным конкурентным преимуществом. Модели, которые требуют меньше ресурсов, будут доминировать.
+      </p>
+    </div>
+  </div>
 </div>
-
-
-</body></html>
+</body>
+</html>
