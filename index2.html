@@ -4,9 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Топ нейросетей 2024 — эффективность и инновации</title>
-  <!-- подключаем тот же шрифт и стили, что в index.html для единства -->
   <style>
-    /* Глобальные стили (перекликаются с index.html) */
+    /* Глобальные стили */
     * {
       margin: 0;
       padding: 0;
@@ -27,10 +26,11 @@
       margin: 0 auto;
     }
 
-    /* Кнопка возврата на главную — стилизована как nav-button из index */
+    /* Кнопка возврата */
     .back-home {
       margin-bottom: 25px;
     }
+    
     .back-button {
       display: inline-flex;
       align-items: center;
@@ -47,23 +47,27 @@
       transition: all 0.3s ease;
       letter-spacing: 0.5px;
       text-transform: uppercase;
+      will-change: transform, box-shadow; /* Оптимизация для анимации */
     }
+    
     .back-button::before {
       content: '◀';
       font-size: 1.6rem;
       transition: transform 0.2s;
     }
+    
     .back-button:hover {
       background: linear-gradient(135deg, #0f1550, #1a237e);
-      transform: translateX(-8px) scale(1.02);
+      transform: translateX(-8px);
       box-shadow: 0 12px 30px rgba(26, 35, 126, 0.6);
       border-color: rgba(255,255,255,0.5);
     }
+    
     .back-button:hover::before {
       transform: translateX(-4px);
     }
 
-    /* основной блок sidebar теперь выглядит как современный карточный контейнер */
+    /* основной контейнер */
     .sidebar {
       background: rgba(255, 255, 255, 0.85);
       backdrop-filter: blur(12px);
@@ -72,7 +76,6 @@
       padding: 50px 45px;
       box-shadow: 0 35px 65px -15px rgba(26, 35, 126, 0.3);
       border: 2px solid rgba(255, 255, 255, 0.7);
-      transition: all 0.2s;
     }
 
     h3 {
@@ -97,6 +100,7 @@
       color: #0b1b3a;
       margin: 40px 0 25px 0;
     }
+    
     h4 span {
       font-size: 2.6rem;
     }
@@ -110,7 +114,7 @@
       padding-left: 20px;
     }
 
-    /* карточки архитектур — с глянцем и анимацией */
+    /* КАРТОЧКИ - ИСПРАВЛЕННАЯ АНИМАЦИЯ */
     .arch-card {
       border-left: 8px solid;
       padding: 28px 30px;
@@ -118,13 +122,15 @@
       margin-bottom: 28px;
       border-radius: 30px 18px 18px 30px;
       box-shadow: 0 20px 35px -8px rgba(0, 20, 40, 0.15);
-      transition: all 0.3s cubic-bezier(0.2, 0.9, 0.4, 1);
-      backdrop-filter: blur(4px);
+      transition: box-shadow 0.3s ease, margin-left 0.3s ease; /* Анимируем только безопасные свойства */
       border-right: 1px solid rgba(0,0,0,0.03);
+      /* Убираем translateZ, scale, translateX из transition */
     }
+    
     .arch-card:hover {
-      transform: translateX(12px) scale(1.01);
+      margin-left: 12px; /* Сдвигаем с помощью margin вместо transform */
       box-shadow: 0 28px 45px -8px rgba(26, 35, 126, 0.25);
+      /* Текст остается четким, так как нет scale и translate3d */
     }
 
     .arch-card p {
@@ -133,6 +139,7 @@
       display: flex;
       align-items: baseline;
     }
+    
     .arch-card p strong {
       min-width: 170px;
       color: #1a237e;
@@ -144,6 +151,7 @@
       margin-right: 15px;
       text-align: center;
     }
+    
     .model-tag {
       background: #e3f2fd;
       color: #0d47a1;
@@ -156,7 +164,7 @@
       border: 1px solid #90caf9;
     }
 
-    /* таблица в стиле index (глянец) */
+    /* таблица */
     table {
       width: 100%;
       border-collapse: separate;
@@ -177,6 +185,7 @@
       text-transform: uppercase;
       letter-spacing: 1px;
     }
+    
     th:first-child { border-radius: 28px 0 0 0; }
     th:last-child { border-radius: 0 28px 0 0; }
 
@@ -186,6 +195,7 @@
       border-bottom: 1px solid #dce5f2;
       font-size: 1.15rem;
     }
+    
     tr:last-child td:first-child { border-radius: 0 0 0 28px; }
     tr:last-child td:last-child { border-radius: 0 0 28px 0; }
     tr:last-child td { border-bottom: none; }
@@ -198,20 +208,23 @@
       color: #b71c1c;
       display: inline-block;
     }
+    
     .energy-yellow {
       background: #fff1cf;
       color: #b45f06;
     }
+    
     .energy-green {
       background: #dcf2dd;
       color: #1e5a2b;
     }
 
-    /* список инноваций + иконки */
+    /* список инноваций - исправленная анимация */
     .innov-list {
       list-style: none;
       padding: 0;
     }
+    
     .innov-item {
       border-left: 6px solid;
       padding: 22px 30px;
@@ -221,12 +234,15 @@
       font-size: 1.2rem;
       font-weight: 500;
       box-shadow: 0 10px 25px -8px rgba(0,0,0,0.1);
-      transition: all 0.25s;
+      transition: box-shadow 0.25s ease, padding-left 0.25s ease; /* Только безопасные свойства */
     }
+    
     .innov-item:hover {
-      transform: translateX(8px);
+      padding-left: 40px; /* Визуальный сдвиг без transform */
+      box-shadow: 0 20px 30px -8px rgba(26, 35, 126, 0.2);
       background: #fafcff;
     }
+    
     .innov-item strong {
       color: #0d2f5c;
       font-weight: 800;
@@ -245,13 +261,12 @@
       text-align: center;
     }
 
-    /* дополнительные акценты как на index */
     .feature-section {
       margin: 50px 0;
       position: relative;
     }
 
-    /* эмодзи и цветные полосы */
+    /* цветные полосы для карточек */
     .arch-card:nth-child(1) { border-left-color: #2e7d32; }
     .arch-card:nth-child(2) { border-left-color: #1565c0; }
     .arch-card:nth-child(3) { border-left-color: #ef6c00; }
@@ -266,17 +281,34 @@
       .arch-card p { flex-wrap: wrap; }
       .arch-card p strong { min-width: 100%; margin-bottom: 5px; }
       th, td { padding: 15px 10px; font-size: 1rem; }
+      
+      /* На мобильных устройствах убираем сдвиг при наведении */
+      .arch-card:hover {
+        margin-left: 0;
+        box-shadow: 0 28px 45px -8px rgba(26, 35, 126, 0.25);
+      }
+      
+      .innov-item:hover {
+        padding-left: 30px;
+      }
+    }
+    
+    /* Дополнительная оптимизация для четкости текста */
+    .arch-card, .innov-item, .back-button, table, .footnote {
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      text-rendering: optimizeLegibility;
     }
   </style>
 </head>
 <body>
 <div class="wrapper">
-  <!-- КНОПКА ВОЗВРАТА НА ГЛАВНУЮ (index.html) -->
+  <!-- КНОПКА ВОЗВРАТА -->
   <div class="back-home">
     <a href="index.html" class="back-button"> Вернуться на главную</a>
   </div>
 
-  <!-- ОСНОВНОЙ КОНТЕНТ (улучшенный index2) -->
+  <!-- ОСНОВНОЙ КОНТЕНТ -->
   <div class="sidebar">
     <h3>🚀 Самые популярные и эффективные нейросети (2024)</h3>
 
@@ -291,6 +323,7 @@
           <p><strong>Ключевое преимущество:</strong> Механизм внимания (attention), позволяющий обрабатывать длинные последовательности</p>
           <span class="model-tag">#attention_is_all_you_need</span>
         </div>
+        
         <div class="arch-card">
           <h5>2. Диффузионные модели (Diffusion Models)</h5>
           <p><strong>Эффективность:</strong> Лучшие результаты в генерации изображений</p>
@@ -298,6 +331,7 @@
           <p><strong>Ключевое преимущество:</strong> Высокое качество и разнообразие генерируемых изображений</p>
           <span class="model-tag">#image_gen</span>
         </div>
+        
         <div class="arch-card">
           <h5>3. Мультимодальные сети</h5>
           <p><strong>Эффективность:</strong> 89-94% точность в кросс‑модальных задачах</p>
@@ -305,6 +339,7 @@
           <p><strong>Ключевое преимущество:</strong> Понимание и связь разных типов данных (текст, изображения, аудио)</p>
           <span class="model-tag">#multimodal</span>
         </div>
+        
         <div class="arch-card">
           <h5>4. Сверточные нейросети нового поколения</h5>
           <p><strong>Эффективность:</strong> 99.1% на ImageNet для классификации</p>
@@ -312,6 +347,7 @@
           <p><strong>Ключевое преимущество:</strong> Оптимизированы для computer vision с меньшим потреблением ресурсов</p>
           <span class="model-tag">#cv</span>
         </div>
+        
         <div class="arch-card">
           <h5>5. Ретривальные модели (Retrieval-Augmented)</h5>
           <p><strong>Эффективность:</strong> На 40% точнее в задачах, требующих фактологической проверки</p>
@@ -360,7 +396,7 @@
       </ul>
     </div>
 
-    <!-- Дополнительный блок (вдохновлён index): тренды будущего -->
+    <!-- Блок трендов -->
     <div style="background: linear-gradient(115deg, #e7ebff, #d4defa); border-radius: 42px; padding: 40px; margin-top: 50px;">
       <h4 style="margin-top: 0;"><span>🔮</span> Взгляд в завтра: тренды 2025</h4>
       <div style="display: flex; flex-wrap: wrap; gap: 25px;">
