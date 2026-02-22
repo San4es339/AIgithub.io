@@ -533,7 +533,7 @@
             color: #3949ab;
         }
         
-        /* Applications Grid */
+        /* Applications Grid - ИСПРАВЛЕНО */
         .applications-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
@@ -660,7 +660,11 @@
             gap: 15px;
         }
         
-        /* УЛУЧШЕННЫЙ СПИСОК ТРЕНДОВ - ЗАМЕНЕНЫ СМАЙЛИКИ */
+        .sidebar h3::before {
+            font-size: 2.2rem;
+        }
+        
+        /* УЛУЧШЕННЫЙ СПИСОК ТРЕНДОВ */
         .trends-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -712,14 +716,13 @@
         }
         
         .trend-icon {
-            font-size: 2.5rem;
+            font-size: 3.5rem;
             margin-bottom: 20px;
             display: block;
-            height: 60px;
+            height: 80px;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-weight: bold;
         }
         
         .trend-title {
