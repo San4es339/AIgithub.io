@@ -2,19 +2,21 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <!-- ВАЖНО: meta viewport уже был, оставляем как есть -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Топ нейросетей 2024 — эффективность и инновации</title>
     
-    <!-- FAVICON - без изменений -->
+    <!-- FAVICON - ИСПРАВЛЕННЫЕ ССЫЛКИ (без слеша) -->
     <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <link rel="shortcut icon" href="favicon.ico">
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    
+    <!-- Запасной вариант на случай если файлы не загрузятся -->
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%231a237e'/><text x='50' y='70' font-size='70' text-anchor='middle' fill='white' font-family='Arial'>AI</text></svg>">
     
     <style>
+        /* ваш существующий CSS из index2.html */
         * {
             margin: 0;
             padding: 0;
@@ -27,7 +29,7 @@
             color: #1a1f36;
             line-height: 1.6;
             min-height: 100vh;
-            padding: 20px 15px; /* Уменьшен padding для мобильных */
+            padding: 30px 20px;
         }
 
         .wrapper {
@@ -35,21 +37,21 @@
             margin: 0 auto;
         }
 
-        /* Кнопка возврата - АДАПТАЦИЯ */
+        /* Кнопка возврата */
         .back-home {
-            margin-bottom: 20px; /* Уменьшен отступ */
+            margin-bottom: 25px;
         }
         
         .back-button {
             display: inline-flex;
             align-items: center;
-            gap: 8px; /* Уменьшен gap */
+            gap: 12px;
             background: linear-gradient(135deg, #1a237e 0%, #283593 80%);
             color: white;
             text-decoration: none;
-            font-size: 1.1rem; /* Уменьшен размер */
+            font-size: 1.3rem;
             font-weight: 600;
-            padding: 14px 28px; /* Уменьшен padding */
+            padding: 16px 36px;
             border-radius: 50px;
             box-shadow: 0 8px 22px rgba(26, 35, 126, 0.4);
             border: 2px solid rgba(255, 255, 255, 0.25);
@@ -61,13 +63,13 @@
         
         .back-button::before {
             content: '◀';
-            font-size: 1.3rem; /* Уменьшен размер */
+            font-size: 1.6rem;
             transition: transform 0.2s;
         }
         
         .back-button:hover {
             background: linear-gradient(135deg, #0f1550, #1a237e);
-            transform: translateX(-5px); /* Уменьшена анимация */
+            transform: translateX(-8px);
             box-shadow: 0 12px 30px rgba(26, 35, 126, 0.6);
             border-color: rgba(255,255,255,0.5);
         }
@@ -81,134 +83,171 @@
             background: rgba(255, 255, 255, 0.85);
             backdrop-filter: blur(12px);
             -webkit-backdrop-filter: blur(12px);
-            border-radius: 40px 40px 36px 36px; /* Уменьшен радиус */
-            padding: 30px 20px; /* Уменьшен padding */
+            border-radius: 56px 56px 48px 48px;
+            padding: 50px 45px;
             box-shadow: 0 35px 65px -15px rgba(26, 35, 126, 0.3);
             border: 2px solid rgba(255, 255, 255, 0.7);
         }
 
         h3 {
-            font-size: 2.2rem; /* Уменьшен размер */
+            font-size: 2.8rem;
             font-weight: 800;
             background: linear-gradient(145deg, #1a237e, #283593);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            margin: 0 0 10px 0;
+            margin: 0 0 15px 0;
             letter-spacing: -0.02em;
             border-bottom: 4px solid #00bcd4;
-            padding-bottom: 15px; /* Уменьшен отступ */
+            padding-bottom: 20px;
             display: inline-block;
         }
 
         h4 {
-            font-size: 1.8rem; /* Уменьшен размер */
+            font-size: 2.2rem;
             font-weight: 700;
             display: flex;
             align-items: center;
-            gap: 10px; /* Уменьшен gap */
+            gap: 15px;
             color: #0b1b3a;
-            margin: 30px 0 20px 0; /* Уменьшены отступы */
+            margin: 40px 0 25px 0;
         }
         
         h4 span {
-            font-size: 2rem; /* Уменьшен размер */
+            font-size: 2.6rem;
         }
 
         h5 {
-            font-size: 1.5rem; /* Уменьшен размер */
+            font-size: 1.8rem;
             font-weight: 700;
             color: #0f2647;
-            margin-bottom: 12px; /* Уменьшен отступ */
-            border-left: 5px solid #00bcd4; /* Уменьшена ширина */
-            padding-left: 15px; /* Уменьшен отступ */
+            margin-bottom: 15px;
+            border-left: 6px solid #00bcd4;
+            padding-left: 20px;
         }
 
         /* КАРТОЧКИ */
         .arch-card {
-            border-left: 6px solid; /* Уменьшена ширина */
-            padding: 20px 18px; /* Уменьшен padding */
+            border-left: 8px solid;
+            padding: 28px 30px;
             background: white;
-            margin-bottom: 20px; /* Уменьшен отступ */
-            border-radius: 24px 12px 12px 24px; /* Уменьшен радиус */
+            margin-bottom: 28px;
+            border-radius: 30px 18px 18px 30px;
             box-shadow: 0 20px 35px -8px rgba(0, 20, 40, 0.15);
             transition: box-shadow 0.3s ease, margin-left 0.3s ease;
             border-right: 1px solid rgba(0,0,0,0.03);
+            position: relative;
         }
         
         .arch-card:hover {
-            margin-left: 8px; /* Уменьшена анимация */
+            margin-left: 12px;
             box-shadow: 0 28px 45px -8px rgba(26, 35, 126, 0.25);
         }
 
         .arch-card p {
-            font-size: 1rem; /* Уменьшен размер */
-            margin: 10px 0;
+            font-size: 1.18rem;
+            margin: 12px 0;
             display: flex;
-            align-items: flex-start; /* Выравнивание по верху */
-            flex-wrap: wrap; /* Перенос для мобильных */
+            align-items: baseline;
         }
         
         .arch-card p strong {
-            min-width: 140px; /* Уменьшена мин. ширина */
+            min-width: 170px;
             color: #1a237e;
             font-weight: 700;
-            font-size: 0.95rem; /* Уменьшен размер */
+            font-size: 1.1rem;
             background: #ecf0ff;
-            padding: 4px 12px; /* Уменьшен padding */
+            padding: 4px 15px;
             border-radius: 40px;
-            margin-right: 10px; /* Уменьшен отступ */
+            margin-right: 15px;
             text-align: center;
-            margin-bottom: 5px; /* Отступ для переноса */
         }
         
         .model-tag {
             background: #e3f2fd;
             color: #0d47a1;
-            padding: 6px 20px; /* Уменьшен padding */
+            padding: 8px 25px;
             border-radius: 50px;
             font-weight: 600;
-            font-size: 0.9rem; /* Уменьшен размер */
+            font-size: 1rem;
             display: inline-block;
-            margin-top: 12px; /* Уменьшен отступ */
+            margin-top: 16px;
             border: 1px solid #90caf9;
         }
 
-        /* таблица - АДАПТАЦИЯ */
-        .table-wrapper {
-            overflow-x: auto; /* Добавляем горизонтальный скролл для таблицы */
-            margin: 25px 0 15px; /* Уменьшены отступы */
-            border-radius: 32px;
-            box-shadow: 0 25px 40px -12px #0f1a42;
+        /* Стили для ссылок */
+        .official-links {
+            margin-top: 20px;
+            padding-top: 15px;
+            border-top: 2px dashed #cbd5e0;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            align-items: center;
+        }
+        
+        .official-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: #f0f4ff;
+            color: #1a237e;
+            text-decoration: none;
+            font-size: 0.95rem;
+            font-weight: 600;
+            padding: 8px 18px;
+            border-radius: 40px;
+            border: 2px solid #c5cae9;
+            transition: all 0.3s ease;
+        }
+        
+        .official-link:hover {
+            background: #1a237e;
+            color: white;
+            border-color: #1a237e;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(26, 35, 126, 0.3);
+        }
+        
+        .official-link::before {
+            content: '🔗';
+            font-size: 1rem;
+            transition: transform 0.2s;
+        }
+        
+        .official-link:hover::before {
+            transform: rotate(15deg);
         }
 
+        /* таблица */
         table {
             width: 100%;
             border-collapse: separate;
             border-spacing: 0;
             border-radius: 32px;
             overflow: hidden;
+            box-shadow: 0 25px 40px -12px #0f1a42;
             background: white;
-            min-width: 600px; /* Минимальная ширина, чтобы контент не сжимался */
+            margin: 30px 0 20px;
         }
 
         th {
             background: #1a237e;
             color: white;
             font-weight: 700;
-            font-size: 1rem; /* Уменьшен размер */
-            padding: 16px 12px; /* Уменьшен padding */
+            font-size: 1.2rem;
+            padding: 22px 20px;
             text-transform: uppercase;
-            letter-spacing: 0.5px;
+            letter-spacing: 1px;
         }
         
         th:first-child { border-radius: 28px 0 0 0; }
         th:last-child { border-radius: 0 28px 0 0; }
 
         td {
-            padding: 14px 12px; /* Уменьшен padding */
+            padding: 20px 18px;
             background: white;
             border-bottom: 1px solid #dce5f2;
-            font-size: 0.95rem; /* Уменьшен размер */
+            font-size: 1.15rem;
         }
         
         tr:last-child td:first-child { border-radius: 0 0 0 28px; }
@@ -217,13 +256,11 @@
 
         .energy-red, .energy-yellow, .energy-green {
             font-weight: 600;
-            padding: 6px 15px; /* Уменьшен padding */
+            padding: 8px 20px;
             border-radius: 40px;
             background: #ffeae9;
             color: #b71c1c;
             display: inline-block;
-            font-size: 0.9rem; /* Уменьшен размер */
-            white-space: nowrap; /* Предотвращаем перенос внутри */
         }
         
         .energy-yellow {
@@ -243,19 +280,19 @@
         }
         
         .innov-item {
-            border-left: 5px solid; /* Уменьшена ширина */
-            padding: 18px 20px; /* Уменьшен padding */
+            border-left: 6px solid;
+            padding: 22px 30px;
             background: white;
-            margin-bottom: 15px; /* Уменьшен отступ */
-            border-radius: 24px 12px 12px 24px; /* Уменьшен радиус */
-            font-size: 1rem; /* Уменьшен размер */
+            margin-bottom: 18px;
+            border-radius: 30px 18px 18px 30px;
+            font-size: 1.2rem;
             font-weight: 500;
             box-shadow: 0 10px 25px -8px rgba(0,0,0,0.1);
             transition: box-shadow 0.25s ease, padding-left 0.25s ease;
         }
         
         .innov-item:hover {
-            padding-left: 25px; /* Уменьшена анимация */
+            padding-left: 40px;
             box-shadow: 0 20px 30px -8px rgba(26, 35, 126, 0.2);
             background: #fafcff;
         }
@@ -268,18 +305,18 @@
         /* сноска */
         .footnote {
             background: #e9ecf8;
-            border-radius: 36px; /* Уменьшен радиус */
-            padding: 18px 20px; /* Уменьшен padding */
-            margin-top: 30px; /* Уменьшен отступ */
+            border-radius: 48px;
+            padding: 22px 30px;
+            margin-top: 40px;
             color: #232f5e;
             border: 2px dashed #3f51b5;
             font-style: italic;
-            font-size: 1rem; /* Уменьшен размер */
+            font-size: 1.15rem;
             text-align: center;
         }
 
         .feature-section {
-            margin: 40px 0; /* Уменьшены отступы */
+            margin: 50px 0;
             position: relative;
         }
 
@@ -290,25 +327,14 @@
         .arch-card:nth-child(4) { border-left-color: #8e24aa; }
         .arch-card:nth-child(5) { border-left-color: #c62828; }
 
-        /* адаптив - ОБЪЕДИНЯЕМ И ДОПОЛНЯЕМ */
+        /* адаптив */
         @media (max-width: 700px) {
-            .sidebar { padding: 25px 15px; }
-            h3 { font-size: 1.8rem; }
-            h4 { font-size: 1.5rem; flex-wrap: wrap; }
-            h5 { font-size: 1.3rem; }
-            
-            .arch-card p { 
-                flex-direction: column; /* Меняем на колонку */
-                align-items: stretch;
-            }
-            .arch-card p strong { 
-                min-width: auto; 
-                margin-right: 0; 
-                margin-bottom: 8px; 
-                text-align: left;
-                display: inline-block;
-                width: fit-content;
-            }
+            .sidebar { padding: 30px 20px; }
+            h3 { font-size: 2.2rem; }
+            h4 { font-size: 1.8rem; flex-wrap: wrap; }
+            .arch-card p { flex-wrap: wrap; }
+            .arch-card p strong { min-width: 100%; margin-bottom: 5px; }
+            th, td { padding: 15px 10px; font-size: 1rem; }
             
             .arch-card:hover {
                 margin-left: 0;
@@ -316,58 +342,21 @@
             }
             
             .innov-item:hover {
-                padding-left: 20px;
+                padding-left: 30px;
             }
             
-            .back-button {
-                font-size: 1rem;
-                padding: 12px 20px;
+            .official-links {
+                flex-direction: column;
+                align-items: flex-start;
             }
-            .back-button::before {
-                font-size: 1.1rem;
-            }
-
-            /* Стили для блока трендов */
-            .feature-section:last-of-type div[style*="display: flex"] {
-                gap: 15px !important;
-            }
-            .feature-section:last-of-type span {
-                font-size: 1rem !important;
-                padding: 10px 20px !important;
-            }
-        }
-
-        @media (max-width: 480px) {
-            body {
-                padding: 10px;
-            }
-            .sidebar {
-                padding: 20px 12px;
-                border-radius: 30px;
-            }
-            h3 {
-                font-size: 1.5rem;
-                padding-bottom: 10px;
-            }
-            h4 {
-                font-size: 1.3rem;
-                margin: 20px 0 15px;
-            }
-            .arch-card {
-                padding: 15px;
-            }
-            .footnote {
-                font-size: 0.9rem;
-                padding: 15px;
-            }
-            .back-button {
-                width: 100%; /* Кнопка на всю ширину */
+            
+            .official-link {
+                width: 100%;
                 justify-content: center;
-                padding: 12px 15px;
             }
         }
         
-        .arch-card, .innov-item, .back-button, .footnote {
+        .arch-card, .innov-item, .back-button, table, .footnote {
             -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;
             text-rendering: optimizeLegibility;
@@ -389,44 +378,74 @@
         <div class="feature-section">
             <h4><span>🏆</span> Топ‑5 архитектур по эффективности</h4>
             <div>
+                <!-- Карточка 1: Трансформеры -->
                 <div class="arch-card">
                     <h5>1. Трансформеры (Transformers)</h5>
                     <p><strong>Эффективность:</strong> 95-98% точность в NLP задачах</p>
                     <p><strong>Популярные модели:</strong> GPT-4, Claude 3, Gemini Ultra, LLaMA 3</p>
                     <p><strong>Ключевое преимущество:</strong> Механизм внимания (attention), позволяющий обрабатывать длинные последовательности</p>
                     <span class="model-tag">#attention_is_all_you_need</span>
+                    
+                    <!-- Ссылки для Gemini Ultra -->
+                    <div class="official-links">
+                        <a href="https://deepmind.google/technologies/gemini/ultra/" class="official-link" target="_blank" rel="noopener noreferrer">Gemini Ultra официальный сайт</a>
+                    </div>
                 </div>
                 
+                <!-- Карточка 2: Диффузионные модели -->
                 <div class="arch-card">
                     <h5>2. Диффузионные модели (Diffusion Models)</h5>
                     <p><strong>Эффективность:</strong> Лучшие результаты в генерации изображений</p>
                     <p><strong>Популярные модели:</strong> DALL‑E 3, Stable Diffusion 3, Midjourney v6</p>
                     <p><strong>Ключевое преимущество:</strong> Высокое качество и разнообразие генерируемых изображений</p>
                     <span class="model-tag">#image_gen</span>
+                    
+                    <!-- Ссылки для Stable Diffusion -->
+                    <div class="official-links">
+                        <a href="https://stability.ai/stable-image" class="official-link" target="_blank" rel="noopener noreferrer">Stable Diffusion 3 официальный сайт</a>
+                    </div>
                 </div>
                 
+                <!-- Карточка 3: Мультимодальные сети -->
                 <div class="arch-card">
                     <h5>3. Мультимодальные сети</h5>
                     <p><strong>Эффективность:</strong> 89-94% точность в кросс‑модальных задачах</p>
                     <p><strong>Популярные модели:</strong> GPT‑4V, Gemini Pro Vision, CLIP</p>
                     <p><strong>Ключевое преимущество:</strong> Понимание и связь разных типов данных (текст, изображения, аудио)</p>
                     <span class="model-tag">#multimodal</span>
+                    
+                    <!-- Ссылки для Gemini Pro Vision -->
+                    <div class="official-links">
+                        <a href="https://deepmind.google/technologies/gemini/pro/" class="official-link" target="_blank" rel="noopener noreferrer">Gemini Pro Vision официальный сайт</a>
+                    </div>
                 </div>
                 
+                <!-- Карточка 4: Сверточные нейросети -->
                 <div class="arch-card">
                     <h5>4. Сверточные нейросети нового поколения</h5>
                     <p><strong>Эффективность:</strong> 99.1% на ImageNet для классификации</p>
                     <p><strong>Популярные модели:</strong> ConvNeXt, EfficientNetV2, RegNet</p>
                     <p><strong>Ключевое преимущество:</strong> Оптимизированы для computer vision с меньшим потреблением ресурсов</p>
                     <span class="model-tag">#cv</span>
+                    
+                    <!-- Ссылки для RegNet -->
+                    <div class="official-links">
+                        <a href="https://github.com/facebookresearch/pycls" class="official-link" target="_blank" rel="noopener noreferrer">RegNet на GitHub (Meta AI)</a>
+                    </div>
                 </div>
                 
+                <!-- Карточка 5: Ретривальные модели -->
                 <div class="arch-card">
                     <h5>5. Ретривальные модели (Retrieval-Augmented)</h5>
                     <p><strong>Эффективность:</strong> На 40% точнее в задачах, требующих фактологической проверки</p>
                     <p><strong>Популярные модели:</strong> RETRO, Atlas, RAG‑системы</p>
                     <p><strong>Ключевое преимущество:</strong> Доступ к внешним базам знаний, снижение "галлюцинаций"</p>
                     <span class="model-tag">#RAG</span>
+                    
+                    <!-- Ссылки для Atlas -->
+                    <div class="official-links">
+                        <a href="https://github.com/facebookresearch/atlas" class="official-link" target="_blank" rel="noopener noreferrer">Atlas на GitHub (Meta AI)</a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -434,26 +453,23 @@
         <!-- СРАВНИТЕЛЬНАЯ ТАБЛИЦА -->
         <div class="feature-section">
             <h4><span>📊</span> Сравнительные характеристики</h4>
-            <!-- Добавляем обертку для скролла -->
-            <div class="table-wrapper">
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Архитектура</th>
-                            <th>Параметры</th>
-                            <th>Точность*</th>
-                            <th>Энергоэфф.</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr><td><strong>GPT-4 (Transformer)</strong></td><td>~1.8 трлн</td><td>86.4%</td><td><span class="energy-red">🔴 Низкая</span></td></tr>
-                        <tr><td><strong>Gemini Ultra (Multimodal)</strong></td><td>~1.6 трлн</td><td>90.0%</td><td><span class="energy-yellow">🟡 Средняя</span></td></tr>
-                        <tr><td><strong>Claude 3 Opus</strong></td><td>~1.4 трлн</td><td>88.7%</td><td><span class="energy-yellow">🟡 Средняя</span></td></tr>
-                        <tr><td><strong>LLaMA 3 70B</strong></td><td>70 млрд</td><td>82.0%</td><td><span class="energy-green">🟢 Высокая</span></td></tr>
-                        <tr><td><strong>Mixtral 8x7B (MoE)</strong></td><td>47 млрд акт.</td><td>85.2%</td><td><span class="energy-green">🟢 Высокая</span></td></tr>
-                    </tbody>
-                </table>
-            </div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Архитектура</th>
+                        <th>Параметры</th>
+                        <th>Точность*</th>
+                        <th>Энергоэфф.</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td><strong>GPT-4 (Transformer)</strong></td><td>~1.8 трлн</td><td>86.4%</td><td><span class="energy-red">🔴 Низкая</span></td></tr>
+                    <tr><td><strong>Gemini Ultra (Multimodal)</strong></td><td>~1.6 трлн</td><td>90.0%</td><td><span class="energy-yellow">🟡 Средняя</span></td></tr>
+                    <tr><td><strong>Claude 3 Opus</strong></td><td>~1.4 трлн</td><td>88.7%</td><td><span class="energy-yellow">🟡 Средняя</span></td></tr>
+                    <tr><td><strong>LLaMA 3 70B</strong></td><td>70 млрд</td><td>82.0%</td><td><span class="energy-green">🟢 Высокая</span></td></tr>
+                    <tr><td><strong>Mixtral 8x7B (MoE)</strong></td><td>47 млрд акт.</td><td>85.2%</td><td><span class="energy-green">🟢 Высокая</span></td></tr>
+                </tbody>
+            </table>
             <div class="footnote">
                 *Точность на тесте MMLU (Massive Multitask Language Understanding)<br>
                 MoE — Mixture of Experts (Смесь экспертов)
@@ -473,15 +489,15 @@
         </div>
 
         <!-- Блок трендов -->
-        <div style="background: linear-gradient(115deg, #e7ebff, #d4defa); border-radius: 36px; padding: 30px 20px; margin-top: 40px;">
+        <div style="background: linear-gradient(115deg, #e7ebff, #d4defa); border-radius: 42px; padding: 40px; margin-top: 50px;">
             <h4 style="margin-top: 0;"><span>🔮</span> Взгляд в завтра: тренды 2025</h4>
-            <div style="display: flex; flex-wrap: wrap; gap: 15px;">
-                <span style="background: #1a237e; color: white; padding: 12px 20px; border-radius: 50px; font-size: 1.1rem;">⚡ нейроморфные чипы</span>
-                <span style="background: #283593; color: white; padding: 12px 20px; border-radius: 50px; font-size: 1.1rem;">🌐 сверхдлинный контекст</span>
-                <span style="background: #3949ab; color: white; padding: 12px 20px; border-radius: 50px; font-size: 1.1rem;">🧩 самообучающиеся агенты</span>
-                <span style="background: #1e3a8a; color: white; padding: 12px 20px; border-radius: 50px; font-size: 1.1rem;">💧 зелёный ИИ</span>
+            <div style="display: flex; flex-wrap: wrap; gap: 25px;">
+                <span style="background: #1a237e; color: white; padding: 15px 30px; border-radius: 60px; font-size: 1.3rem;">⚡ нейроморфные чипы</span>
+                <span style="background: #283593; color: white; padding: 15px 30px; border-radius: 60px; font-size: 1.3rem;">🌐 сверхдлинный контекст</span>
+                <span style="background: #3949ab; color: white; padding: 15px 30px; border-radius: 60px; font-size: 1.3rem;">🧩 самообучающиеся агенты</span>
+                <span style="background: #1e3a8a; color: white; padding: 15px 30px; border-radius: 60px; font-size: 1.3rem;">💧 зелёный ИИ</span>
             </div>
-            <p style="margin-top: 25px; font-size: 1rem; background: white; border-radius: 30px; padding: 18px; border: 2px solid #00bcd4;">
+            <p style="margin-top: 30px; font-size: 1.2rem; background: white; border-radius: 38px; padding: 22px; border: 2px solid #00bcd4;">
                 <strong>Энергоэффективность</strong> становится главным конкурентным преимуществом. Модели, которые требуют меньше ресурсов, будут доминировать.
             </p>
         </div>
