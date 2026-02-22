@@ -2,19 +2,21 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <!-- ВАЖНО: meta viewport уже был, оставляем как есть -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Нейронные сети - Будущее Искусственного Интеллекта</title>
     
-    <!-- FAVICON - без изменений -->
+    <!-- FAVICON - ИСПРАВЛЕННЫЕ ССЫЛКИ (без слеша) -->
     <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <link rel="shortcut icon" href="favicon.ico">
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    
+    <!-- Запасной вариант на случай если файлы не загрузятся -->
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%231a237e'/><text x='50' y='70' font-size='70' text-anchor='middle' fill='white' font-family='Arial'>AI</text></svg>">
     
     <style>
+        /* ваш существующий CSS */
         * {
             margin: 0;
             padding: 0;
@@ -39,30 +41,30 @@
         header {
             background: linear-gradient(135deg, #1a237e 0%, #283593 50%, #3949ab 100%);
             color: white;
-            padding: 40px 0; /* Уменьшен padding на мобильных */
+            padding: 60px 0;
             text-align: center;
             box-shadow: 0 4px 20px rgba(0,0,0,0.2);
-            margin-bottom: 30px; /* Уменьшен отступ */
+            margin-bottom: 50px;
             border-bottom: 5px solid #00bcd4;
             display: flex;
             align-items: center;
             justify-content: center;
-            min-height: 250px; /* Немного уменьшена высота */
+            min-height: 300px;
         }
         
         .header-content {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 0 15px; /* Уменьшен padding */
+            padding: 0 20px;
             width: 100%;
         }
         
         h1 {
-            font-size: 3rem; /* Уменьшен базовый размер для мобильных */
+            font-size: 4.5rem;
             font-weight: 800;
-            margin-bottom: 15px;
+            margin-bottom: 20px;
             text-transform: uppercase;
-            letter-spacing: 1px;
+            letter-spacing: 2px;
             text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
             background: linear-gradient(90deg, #00bcd4, #4fc3f7);
             -webkit-background-clip: text;
@@ -74,19 +76,19 @@
         }
         
         .tagline {
-            font-size: 1.3rem; /* Уменьшен размер */
+            font-size: 1.8rem;
             font-weight: 300;
-            margin: 15px auto 20px; /* Уменьшены отступы */
+            margin: 20px auto 30px;
             opacity: 0.9;
             max-width: 800px;
             text-align: center;
             line-height: 1.5;
         }
         
-        /* Navigation - АДАПТАЦИЯ */
+        /* Navigation */
         nav {
             background: #1a237e;
-            padding: 15px 0; /* Уменьшен padding */
+            padding: 25px 0;
             position: sticky;
             top: 0;
             z-index: 1000;
@@ -97,24 +99,21 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            gap: 15px; /* Уменьшен gap */
-            flex-wrap: wrap; /* Добавлен перенос для мобильных */
-            padding: 0 10px;
+            gap: 40px;
         }
         
         nav a {
             color: white;
             text-decoration: none;
-            font-size: 1rem; /* Уменьшен размер */
+            font-size: 1.3rem;
             font-weight: 600;
-            padding: 10px 18px; /* Уменьшен padding */
+            padding: 15px 30px;
             border-radius: 30px;
             transition: all 0.4s ease;
             text-transform: uppercase;
-            letter-spacing: 0.5px;
+            letter-spacing: 1px;
             position: relative;
             overflow: hidden;
-            white-space: nowrap; /* Предотвращаем перенос текста внутри кнопки */
         }
         
         nav a::before {
@@ -134,7 +133,7 @@
         
         nav a:hover {
             background: rgba(255,255,255,0.15);
-            transform: translateY(-2px);
+            transform: translateY(-3px);
             box-shadow: 0 5px 15px rgba(0,0,0,0.3);
         }
         
@@ -142,24 +141,24 @@
         .nav-button {
             background: linear-gradient(135deg, #ff4081 0%, #f50057 100%);
             color: white;
-            padding: 10px 25px; /* Уменьшен padding */
+            padding: 15px 35px;
             border-radius: 30px;
-            font-size: 1rem; /* Уменьшен размер */
+            font-size: 1.3rem;
             font-weight: 700;
             text-transform: uppercase;
-            letter-spacing: 0.5px;
+            letter-spacing: 1px;
             text-decoration: none;
             transition: all 0.4s ease;
             box-shadow: 0 5px 20px rgba(255, 64, 129, 0.3);
             border: 2px solid rgba(255, 255, 255, 0.3);
-            display: inline-flex;
+            display: flex;
             align-items: center;
-            gap: 5px; /* Уменьшен gap */
+            gap: 10px;
         }
         
         .nav-button::before {
             content: '🚀';
-            font-size: 1.2rem; /* Уменьшен размер */
+            font-size: 1.5rem;
         }
         
         .nav-button:hover {
@@ -172,21 +171,21 @@
         .main-content {
             background: white;
             border-radius: 25px;
-            padding: 30px 20px; /* Уменьшен padding для мобильных */
-            margin: 30px auto;
+            padding: 60px;
+            margin: 50px auto;
             box-shadow: 0 10px 40px rgba(0,0,0,0.1);
             border: 1px solid rgba(255,255,255,0.3);
         }
         
         h2 {
-            font-size: 2.2rem; /* Уменьшен размер */
+            font-size: 3.2rem;
             color: #1a237e;
-            margin-bottom: 25px; /* Уменьшен отступ */
-            padding-bottom: 15px; /* Уменьшен отступ */
+            margin-bottom: 40px;
+            padding-bottom: 20px;
             border-bottom: 4px solid #00bcd4;
             position: relative;
             text-transform: uppercase;
-            letter-spacing: 0.5px;
+            letter-spacing: 1px;
         }
         
         h2::after {
@@ -194,32 +193,32 @@
             position: absolute;
             bottom: -4px;
             left: 0;
-            width: 100px; /* Уменьшена ширина */
+            width: 150px;
             height: 4px;
             background: #ff4081;
         }
         
         h3 {
-            font-size: 1.8rem; /* Уменьшен размер */
+            font-size: 2.2rem;
             color: #3949ab;
-            margin: 30px 0 20px; /* Уменьшены отступы */
-            padding-left: 15px; /* Уменьшен отступ */
-            border-left: 5px solid #00bcd4; /* Уменьшена ширина */
+            margin: 40px 0 25px;
+            padding-left: 20px;
+            border-left: 6px solid #00bcd4;
         }
         
         p {
-            font-size: 1.1rem; /* Уменьшен размер */
-            margin-bottom: 20px; /* Уменьшен отступ */
-            text-align: left; /* Для мобильных лучше выравнивать по левому краю */
-            line-height: 1.7;
+            font-size: 1.3rem;
+            margin-bottom: 25px;
+            text-align: justify;
+            line-height: 1.9;
         }
         
         /* Новый стиль для экологических проблем */
         .warning-section {
             background: linear-gradient(145deg, #fff3e0, #ffe0b2);
             border-radius: 20px;
-            padding: 25px 20px; /* Уменьшен padding */
-            margin: 30px 0;
+            padding: 40px;
+            margin: 40px 0;
             border: 2px solid #ffb74d;
             transition: all 0.4s ease;
             position: relative;
@@ -231,35 +230,35 @@
             position: absolute;
             top: 0;
             left: 0;
-            width: 6px; /* Уменьшена ширина */
+            width: 8px;
             height: 100%;
             background: linear-gradient(180deg, #ff9800, #f44336);
         }
         
         .warning-section:hover {
-            transform: translateY(-5px); /* Уменьшена анимация */
+            transform: translateY(-10px);
             box-shadow: 0 20px 50px rgba(255, 152, 0, 0.2);
         }
         
         .warning-title {
             color: #d32f2f;
-            font-size: 1.8rem; /* Уменьшен размер */
-            margin-bottom: 15px; /* Уменьшен отступ */
+            font-size: 2.5rem;
+            margin-bottom: 20px;
             display: flex;
             align-items: center;
-            gap: 10px; /* Уменьшен gap */
+            gap: 15px;
         }
         
         .warning-icon {
-            font-size: 2rem; /* Уменьшен размер */
+            font-size: 2.8rem;
         }
         
         /* Enhanced Feature Sections */
         .feature-section {
             background: linear-gradient(145deg, #f0f4ff, #e3e9ff);
             border-radius: 20px;
-            padding: 25px 20px; /* Уменьшен padding */
-            margin: 30px 0;
+            padding: 40px;
+            margin: 40px 0;
             border: 2px solid #c5cae9;
             transition: all 0.4s ease;
             position: relative;
@@ -271,28 +270,28 @@
             position: absolute;
             top: 0;
             left: 0;
-            width: 6px; /* Уменьшена ширина */
+            width: 8px;
             height: 100%;
             background: linear-gradient(180deg, #00bcd4, #3949ab);
         }
         
         .feature-section:hover {
-            transform: translateY(-5px); /* Уменьшена анимация */
+            transform: translateY(-10px);
             box-shadow: 0 20px 50px rgba(0,0,0,0.15);
         }
         
         /* Data Center Grid */
         .datacenter-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Мин. ширина уменьшена */
-            gap: 25px; /* Уменьшен gap */
-            margin: 40px 0;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 35px;
+            margin: 50px 0;
         }
         
         .datacenter-card {
             background: white;
             border-radius: 20px;
-            padding: 25px 20px; /* Уменьшен padding */
+            padding: 35px;
             box-shadow: 0 10px 30px rgba(0,0,0,0.08);
             border: 2px solid #e3f2fd;
             transition: all 0.4s ease;
@@ -306,40 +305,40 @@
             top: 0;
             left: 0;
             width: 100%;
-            height: 5px; /* Уменьшена высота */
+            height: 6px;
             background: linear-gradient(90deg, #00bcd4, #3949ab);
         }
         
         .datacenter-card:hover {
-            transform: translateY(-10px); /* Уменьшена анимация */
+            transform: translateY(-15px);
             box-shadow: 0 25px 50px rgba(0,0,0,0.15);
         }
         
         .datacenter-icon {
-            font-size: 2.8rem; /* Уменьшен размер */
-            margin-bottom: 15px; /* Уменьшен отступ */
+            font-size: 3.5rem;
+            margin-bottom: 25px;
             color: #3949ab;
         }
         
         .datacenter-title {
-            font-size: 1.5rem; /* Уменьшен размер */
+            font-size: 1.8rem;
             color: #1a237e;
-            margin-bottom: 15px; /* Уменьшен отступ */
+            margin-bottom: 20px;
             font-weight: 700;
         }
         
         /* Stats Section */
         .stats-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Мин. ширина уменьшена */
-            gap: 25px; /* Уменьшен gap */
-            margin: 40px 0;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 35px;
+            margin: 50px 0;
         }
         
         .stat-card {
             background: linear-gradient(135deg, #2196f3 0%, #1976d2 100%);
             color: white;
-            padding: 30px 20px; /* Уменьшен padding */
+            padding: 40px 30px;
             border-radius: 20px;
             text-align: center;
             transition: all 0.4s ease;
@@ -362,37 +361,37 @@
         }
         
         .stat-card:hover {
-            transform: scale(1.05); /* Уменьшена анимация */
+            transform: scale(1.08);
             box-shadow: 0 20px 40px rgba(0,0,0,0.2);
         }
         
         .stat-number {
-            font-size: 3rem; /* Уменьшен размер */
+            font-size: 4.5rem;
             font-weight: 900;
-            margin-bottom: 10px; /* Уменьшен отступ */
+            margin-bottom: 15px;
             text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
         }
         
         .stat-desc {
-            font-size: 1.1rem; /* Уменьшен размер */
+            font-size: 1.4rem;
             font-weight: 500;
             opacity: 0.95;
         }
         
-        /* Timeline - АДАПТАЦИЯ */
+        /* Timeline - УЛУЧШЕННЫЙ СТИЛЬ */
         .timeline {
             position: relative;
             max-width: 1200px;
-            margin: 50px auto;
-            padding: 10px; /* Уменьшен padding */
+            margin: 60px auto;
+            padding: 20px;
         }
         
         .timeline::before {
             content: '';
             position: absolute;
-            left: 20px; /* Фиксируем линию слева для мобильных */
-            transform: none; /* Убираем трансформацию */
-            width: 4px; /* Тоньше */
+            left: 50%;
+            transform: translateX(-50%);
+            width: 6px;
             height: 100%;
             background: linear-gradient(180deg, #00bcd4, #3949ab, #ff4081);
             border-radius: 10px;
@@ -400,11 +399,10 @@
         }
         
         .timeline-item {
-            margin: 30px 0; /* Уменьшен отступ */
+            margin: 50px 0;
             position: relative;
-            width: 100%; /* На мобильных всегда 100% */
-            padding: 0 0 0 50px; /* Отступ слева для контента */
-            text-align: left; /* Текст слева */
+            width: 50%;
+            padding: 30px;
             animation: fadeIn 0.8s ease-out;
         }
         
@@ -413,53 +411,56 @@
             to { opacity: 1; transform: translateY(0); }
         }
         
-        /* Убираем старые стили для четных/нечетных */
-        .timeline-item:nth-child(odd),
+        .timeline-item:nth-child(odd) {
+            left: 0;
+            text-align: right;
+            padding-right: 50px;
+        }
+        
         .timeline-item:nth-child(even) {
-            left: auto;
+            left: 50%;
             text-align: left;
-            padding-right: 0;
             padding-left: 50px;
         }
         
         .timeline-item::before {
             content: '';
             position: absolute;
-            width: 22px; /* Уменьшен размер */
-            height: 22px; /* Уменьшен размер */
-            left: 9px; /* Позиционируем относительно новой линии */
-            top: 25px; /* Корректируем отступ сверху */
+            width: 32px;
+            height: 32px;
             background: #ff4081;
             border-radius: 50%;
-            border: 4px solid white;
-            box-shadow: 0 0 0 4px #ff4081, 0 5px 20px rgba(255, 64, 129, 0.4);
+            border: 6px solid white;
+            box-shadow: 0 0 0 6px #ff4081, 0 5px 20px rgba(255, 64, 129, 0.4);
             z-index: 2;
             transition: all 0.4s ease;
         }
         
         .timeline-item:hover::before {
             transform: scale(1.2);
-            box-shadow: 0 0 0 6px #ff4081, 0 10px 30px rgba(255, 64, 129, 0.6);
+            box-shadow: 0 0 0 8px #ff4081, 0 10px 30px rgba(255, 64, 129, 0.6);
         }
         
-        /* Убираем старые позиции для псевдоэлемента */
-        .timeline-item:nth-child(odd)::before,
+        .timeline-item:nth-child(odd)::before {
+            right: -16px;
+            top: 40px;
+        }
+        
         .timeline-item:nth-child(even)::before {
-            right: auto;
-            left: 9px;
-            top: 25px;
+            left: -16px;
+            top: 40px;
         }
         
         .timeline-year {
-            font-size: 1.8rem; /* Уменьшен размер */
+            font-size: 2.5rem;
             font-weight: 900;
             color: #1a237e;
-            margin-bottom: 10px; /* Уменьшен отступ */
+            margin-bottom: 15px;
             display: inline-block;
-            padding: 10px 20px; /* Уменьшен padding */
+            padding: 15px 30px;
             background: linear-gradient(135deg, rgba(0, 188, 212, 0.1), rgba(57, 73, 171, 0.1));
-            border-radius: 40px; /* Уменьшен радиус */
-            border: 2px solid #00bcd4; /* Тоньше граница */
+            border-radius: 50px;
+            border: 3px solid #00bcd4;
             box-shadow: 0 10px 25px rgba(0, 188, 212, 0.2);
             transition: all 0.4s ease;
         }
@@ -472,7 +473,7 @@
         
         .timeline-content {
             background: linear-gradient(145deg, #f8f9ff, #f0f4ff);
-            padding: 20px; /* Уменьшен padding */
+            padding: 30px;
             border-radius: 20px;
             box-shadow: 0 10px 30px rgba(0,0,0,0.08);
             border: 2px solid #e3f2fd;
@@ -487,26 +488,26 @@
             top: 0;
             left: 0;
             width: 100%;
-            height: 5px; /* Уменьшена высота */
+            height: 6px;
             background: linear-gradient(90deg, #00bcd4, #3949ab);
         }
         
         .timeline-item:hover .timeline-content {
-            transform: translateY(-5px); /* Уменьшена анимация */
+            transform: translateY(-10px);
             box-shadow: 0 20px 40px rgba(0,0,0,0.15);
         }
         
         .timeline-content p {
             color: #333;
-            font-size: 1rem; /* Уменьшен размер */
-            line-height: 1.6;
+            font-size: 1.3rem;
+            line-height: 1.7;
             margin: 0;
-            padding: 5px 0;
+            padding: 10px 0;
         }
         
         .timeline-icon {
-            font-size: 2rem; /* Уменьшен размер */
-            margin-bottom: 10px; /* Уменьшен отступ */
+            font-size: 2.5rem;
+            margin-bottom: 15px;
             display: block;
             color: #3949ab;
         }
@@ -514,15 +515,15 @@
         /* Applications Grid */
         .applications-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Мин. ширина уменьшена */
-            gap: 25px; /* Уменьшен gap */
-            margin: 40px 0;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 35px;
+            margin: 50px 0;
         }
         
         .application-card {
             background: white;
             border-radius: 20px;
-            padding: 25px 20px; /* Уменьшен padding */
+            padding: 35px;
             box-shadow: 0 10px 30px rgba(0,0,0,0.08);
             border: 2px solid #e3f2fd;
             transition: all 0.4s ease;
@@ -536,39 +537,39 @@
             top: 0;
             left: 0;
             width: 100%;
-            height: 5px; /* Уменьшена высота */
+            height: 6px;
             background: linear-gradient(90deg, #00bcd4, #3949ab);
         }
         
         .application-card:hover {
-            transform: translateY(-10px); /* Уменьшена анимация */
+            transform: translateY(-15px);
             box-shadow: 0 25px 50px rgba(0,0,0,0.15);
         }
         
         .app-icon {
-            font-size: 2.8rem; /* Уменьшен размер */
-            margin-bottom: 15px; /* Уменьшен отступ */
+            font-size: 3.5rem;
+            margin-bottom: 25px;
             color: #3949ab;
         }
         
         .app-title {
-            font-size: 1.5rem; /* Уменьшен размер */
+            font-size: 1.8rem;
             color: #1a237e;
-            margin-bottom: 15px; /* Уменьшен отступ */
+            margin-bottom: 20px;
             font-weight: 700;
         }
         
         /* Framework List */
         .framework-list {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Мин. ширина уменьшена */
-            gap: 25px; /* Уменьшен gap */
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
             margin: 40px 0;
         }
         
         .framework-item {
             background: linear-gradient(135deg, #f8f9ff, #e8eaf6);
-            padding: 25px 20px; /* Уменьшен padding */
+            padding: 30px;
             border-radius: 15px;
             border: 2px solid #c5cae9;
             transition: all 0.3s ease;
@@ -576,20 +577,20 @@
         
         .framework-item:hover {
             background: linear-gradient(135deg, #e8eaf6, #c5cae9);
-            transform: translateX(5px); /* Уменьшена анимация */
+            transform: translateX(10px);
         }
         
         .framework-name {
-            font-size: 1.5rem; /* Уменьшен размер */
+            font-size: 1.8rem;
             color: #1a237e;
-            margin-bottom: 10px; /* Уменьшен отступ */
+            margin-bottom: 15px;
             font-weight: 700;
         }
         
         .framework-developer {
             color: #666;
-            font-size: 1rem; /* Уменьшен размер */
-            margin-bottom: 15px; /* Уменьшен отступ */
+            font-size: 1.2rem;
+            margin-bottom: 15px;
         }
         
         .framework-features {
@@ -598,11 +599,10 @@
         }
         
         .framework-features li {
-            padding: 6px 0; /* Уменьшен отступ */
-            padding-left: 25px; /* Уменьшен отступ */
+            padding: 8px 0;
+            padding-left: 30px;
             position: relative;
             color: #333;
-            font-size: 0.95rem; /* Уменьшен размер */
         }
         
         .framework-features li::before {
@@ -610,51 +610,51 @@
             position: absolute;
             left: 0;
             color: #00bcd4;
-            font-size: 1.3rem; /* Уменьшен размер */
+            font-size: 1.5rem;
         }
         
         /* Sidebar */
         .sidebar {
             background: linear-gradient(135deg, #ffffff 0%, #f0f4ff 100%);
             border-radius: 25px;
-            padding: 30px 20px; /* Уменьшен padding */
+            padding: 50px;
             color: #333;
             box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
-            margin: 40px auto;
+            margin: 50px auto;
             max-width: 1400px;
             border: 2px solid #e3f2fd;
         }
         
         .sidebar h3 {
             color: #1a237e;
-            border-left: 5px solid #00bcd4; /* Уменьшена ширина */
-            padding-left: 15px; /* Уменьшен отступ */
-            margin-bottom: 25px; /* Уменьшен отступ */
-            font-size: 1.8rem; /* Уменьшен размер */
+            border-left: 6px solid #00bcd4;
+            padding-left: 25px;
+            margin-bottom: 35px;
+            font-size: 2.5rem;
             background: rgba(0, 188, 212, 0.05);
-            padding: 15px; /* Уменьшен padding */
+            padding: 20px;
             border-radius: 10px;
             display: flex;
             align-items: center;
-            gap: 10px; /* Уменьшен gap */
+            gap: 15px;
         }
         
         .sidebar h3::before {
-            font-size: 1.8rem; /* Уменьшен размер */
+            font-size: 2.2rem;
         }
         
-        /* Trends Grid */
+        /* УЛУЧШЕННЫЙ СПИСОК ТРЕНДОВ */
         .trends-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Мин. ширина уменьшена */
-            gap: 20px; /* Уменьшен gap */
-            margin-top: 25px; /* Уменьшен отступ */
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin-top: 30px;
         }
         
         .trend-card {
             background: linear-gradient(145deg, #ffffff, #f8f9ff);
             border-radius: 20px;
-            padding: 25px 20px; /* Уменьшен padding */
+            padding: 30px;
             box-shadow: 0 10px 30px rgba(0,0,0,0.08);
             border: 2px solid #e3f2fd;
             transition: all 0.4s ease;
@@ -669,7 +669,7 @@
             top: 0;
             left: 0;
             width: 100%;
-            height: 5px; /* Уменьшена высота */
+            height: 6px;
             background: linear-gradient(90deg, #4caf50, #8bc34a);
         }
         
@@ -690,209 +690,133 @@
         }
         
         .trend-card:hover {
-            transform: translateY(-5px) scale(1.02); /* Уменьшена анимация */
+            transform: translateY(-10px) scale(1.02);
             box-shadow: 0 20px 40px rgba(0,0,0,0.15);
         }
         
         .trend-icon {
-            font-size: 2.8rem; /* Уменьшен размер */
-            margin-bottom: 15px; /* Уменьшен отступ */
+            font-size: 3.5rem;
+            margin-bottom: 20px;
             display: block;
-            height: 60px; /* Уменьшена высота */
+            height: 80px;
             display: flex;
             align-items: center;
             justify-content: center;
         }
         
         .trend-title {
-            font-size: 1.3rem; /* Уменьшен размер */
+            font-size: 1.6rem;
             color: #1a237e;
-            margin-bottom: 10px; /* Уменьшен отступ */
+            margin-bottom: 15px;
             font-weight: 700;
             line-height: 1.4;
         }
         
         .trend-desc {
             color: #666;
-            font-size: 0.95rem; /* Уменьшен размер */
-            line-height: 1.5;
+            font-size: 1.1rem;
+            line-height: 1.6;
         }
         
         /* Footer */
         footer {
             background: linear-gradient(135deg, #0d0d0d 0%, #1a1a2e 100%);
             color: white;
-            padding: 40px 0 20px; /* Уменьшен padding */
-            margin-top: 60px; /* Уменьшен отступ */
+            padding: 60px 0 30px;
+            margin-top: 80px;
             border-top: 5px solid #00bcd4;
         }
         
         .footer-content {
             max-width: 1400px;
             margin: 0 auto;
-            padding: 0 15px; /* Уменьшен padding */
+            padding: 0 20px;
             text-align: center;
         }
         
         .footer-content p {
-            font-size: 1rem; /* Уменьшен размер */
-            margin-bottom: 15px; /* Уменьшен отступ */
+            font-size: 1.2rem;
+            margin-bottom: 20px;
             text-align: center;
             opacity: 0.9;
             color: white;
         }
         
         .copyright {
-            margin-top: 30px; /* Уменьшен отступ */
-            padding-top: 15px; /* Уменьшен отступ */
+            margin-top: 40px;
+            padding-top: 20px;
             border-top: 1px solid rgba(255,255,255,0.1);
-            font-size: 0.9rem; /* Уменьшен размер */
+            font-size: 1.1rem;
             opacity: 0.7;
         }
         
-        /* Responsive Design - ОБЪЕДИНЯЕМ И ДОПОЛНЯЕМ */
-        @media (max-width: 768px) {
+        /* Responsive Design */
+        @media (max-width: 1200px) {
             h1 {
-                font-size: 2.2rem;
-            }
-            
-            h2 {
-                font-size: 1.8rem;
-            }
-            
-            h3 {
-                font-size: 1.5rem;
-            }
-            
-            .tagline {
-                font-size: 1.1rem;
-            }
-            
-            .nav-container {
-                flex-direction: column; /* Меню в колонку */
-                gap: 10px;
-                width: 100%;
-            }
-            
-            nav a, .nav-button {
-                width: 100%; /* На всю ширину */
-                text-align: center;
-                justify-content: center;
-                white-space: normal; /* Разрешаем перенос текста */
-                font-size: 0.95rem;
-                padding: 12px 10px;
-            }
-            
-            .nav-button {
-                padding: 12px 10px;
-            }
-            
-            .nav-button::before {
-                font-size: 1.1rem;
+                font-size: 3.5rem;
             }
             
             .main-content {
-                padding: 20px 15px;
-            }
-            
-            .warning-title {
-                font-size: 1.5rem;
-            }
-            
-            .stat-number {
-                font-size: 2.5rem;
-            }
-            
-            .stat-desc {
-                font-size: 1rem;
-            }
-            
-            /* Дополнительные правки для очень маленьких экранов */
-            .datacenter-grid,
-            .applications-grid,
-            .framework-list,
-            .trends-grid,
-            .stats-grid {
-                grid-template-columns: 1fr; /* Все в одну колонку */
-                gap: 20px;
-            }
-            
-            .timeline-year {
-                font-size: 1.5rem;
-                padding: 8px 15px;
-            }
-            
-            .sidebar h3 {
-                font-size: 1.5rem;
-            }
-            
-            /* Убираем лишние трансформации на мобильных для плавности */
-            .datacenter-card:hover,
-            .application-card:hover,
-            .framework-item:hover,
-            .trend-card:hover,
-            .warning-section:hover,
-            .feature-section:hover {
-                transform: none;
-                box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-            }
-            
-            .timeline-item:hover .timeline-content {
-                transform: none;
+                padding: 40px;
             }
         }
         
-        /* Дополнительные правки для экранов до 480px */
-        @media (max-width: 480px) {
+        @media (max-width: 768px) {
             h1 {
-                font-size: 1.8rem;
+                font-size: 2.5rem;
             }
             
             h2 {
-                font-size: 1.5rem;
+                font-size: 2.5rem;
             }
             
-            .container {
-                padding: 0 10px;
+            .nav-container {
+                flex-direction: column;
+                gap: 15px;
             }
             
-            .main-content {
-                padding: 15px 12px;
+            nav a, .nav-button {
+                width: 100%;
+                text-align: center;
+                justify-content: center;
             }
             
-            .datacenter-card,
-            .application-card,
-            .framework-item,
-            .trend-card {
-                padding: 20px 15px;
+            .timeline::before {
+                left: 20px;
             }
             
             .timeline-item {
-                padding-left: 40px;
+                width: 100%;
+                left: 0 !important;
+                text-align: left !important;
+                padding-left: 60px;
+                padding-right: 20px;
             }
             
             .timeline-item::before {
-                width: 18px;
-                height: 18px;
-                left: 6px;
-                top: 20px;
-                border-width: 3px;
-                box-shadow: 0 0 0 3px #ff4081, 0 5px 20px rgba(255, 64, 129, 0.4);
+                left: 8px !important;
+                right: auto !important;
             }
             
-            .timeline-content {
-                padding: 15px;
+            .stats-grid {
+                grid-template-columns: 1fr;
             }
             
-            .footer-content p {
-                font-size: 0.9rem;
+            .applications-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .datacenter-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .trends-grid {
+                grid-template-columns: 1fr;
             }
         }
     </style>
 </head>
 <body>
-    <!-- Весь HTML-код тела страницы остается БЕЗ ИЗМЕНЕНИЙ -->
-    <!-- ... -->
     <header>
         <div class="header-content">
             <h1>НЕЙРОННЫЕ СЕТИ</h1>
@@ -1130,7 +1054,7 @@
                     <h3>Прогнозы на будущее</h3>
                     <p>К 2030 году ожидается, что центры обработки данных ИИ будут потреблять до 8% мировой электроэнергии. Однако параллельно развиваются технологии, которые могут снизить это потребление:</p>
                     
-                    <ul style="line-height: 1.7; padding-left: 20px;">
+                    <ul style="line-height: 1.9; padding-left: 30px;">
                         <li><strong>Нейроморфные чипы:</strong> Энергоэффективные процессоры, имитирующие работу мозга (потребление снижается в 1000 раз)</li>
                         <li><strong>Оптические вычисления:</strong> Использование фотонов вместо электронов для передачи данных</li>
                         <li><strong>Распределенные вычисления:</strong> Использование избыточных вычислительных ресурсов пользовательских устройств</li>
@@ -1228,7 +1152,7 @@
                 </div>
             </div>
             
-            <h3 style="margin-top: 60px;"><span style="margin-right: 10px;">📈</span>Тренды 2024-2025</h3>
+            <h3 style="margin-top: 80px;"><span style="margin-right: 10px;">📈</span>Тренды 2024-2025</h3>
             <div class="trends-grid">
                 <div class="trend-card">
                     <div class="trend-icon">🔄</div>
